@@ -13,10 +13,14 @@ class App: NSObject {
     var summary: String
     var id_category: Int
     var rights: String
-    init(name: String, summary:String, id_category:Int, rights: String) {
+    var image : UIImage?
+    init(name: String, summary:String, id_category:Int, rights: String, image : UIImage?) {
         self.name = name
         self.summary = summary
         self.id_category = id_category
         self.rights = rights
+        if (image != nil){
+            self.image = image!
+        }
     }
 }
