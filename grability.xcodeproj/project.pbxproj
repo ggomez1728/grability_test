@@ -13,9 +13,14 @@
 		82C17C641D1C772200512BD4 /* grability.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82C17C621D1C772200512BD4 /* grability.xcdatamodeld */; };
 		82C17C661D1C772200512BD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82C17C651D1C772200512BD4 /* Assets.xcassets */; };
 		82C17C691D1C772200512BD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C17C671D1C772200512BD4 /* LaunchScreen.storyboard */; };
+		82C17C741D1C78E500512BD4 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C17C731D1C78E500512BD4 /* App.swift */; };
+		82C17C761D1C7B9E00512BD4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C17C751D1C7B9E00512BD4 /* Category.swift */; };
+		E05837B60E0BE95BE546FDCB /* Pods_grability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29339665F197153854D6F92E /* Pods_grability.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29339665F197153854D6F92E /* Pods_grability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3644AB852E8D4B43C16AA0D7 /* Pods-grability.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grability.release.xcconfig"; path = "Pods/Target Support Files/Pods-grability/Pods-grability.release.xcconfig"; sourceTree = "<group>"; };
 		82C17C581D1C772200512BD4 /* grability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C17C5B1D1C772200512BD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C17C5D1D1C772200512BD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		82C17C651D1C772200512BD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82C17C681D1C772200512BD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82C17C6A1D1C772200512BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C17C731D1C78E500512BD4 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		82C17C751D1C7B9E00512BD4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F62EFCED3F4603890EDBAF9E /* Pods-grability.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grability.debug.xcconfig"; path = "Pods/Target Support Files/Pods-grability/Pods-grability.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E05837B60E0BE95BE546FDCB /* Pods_grability.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42F4A5F08C324B9DC50DC33F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29339665F197153854D6F92E /* Pods_grability.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		82C17C4F1D1C772200512BD4 = {
 			isa = PBXGroup;
 			children = (
 				82C17C5A1D1C772200512BD4 /* grability */,
 				82C17C591D1C772200512BD4 /* Products */,
+				CFA462AAAA30ADE5BED281F7 /* Pods */,
+				42F4A5F08C324B9DC50DC33F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +75,8 @@
 		82C17C5A1D1C772200512BD4 /* grability */ = {
 			isa = PBXGroup;
 			children = (
+				82C17C721D1C776500512BD4 /* Models */,
+				82C17C701D1C773E00512BD4 /* ViewControllers */,
 				82C17C5B1D1C772200512BD4 /* AppDelegate.swift */,
 				82C17C5D1D1C772200512BD4 /* ViewController.swift */,
 				82C17C5F1D1C772200512BD4 /* Main.storyboard */,
@@ -67,6 +88,31 @@
 			path = grability;
 			sourceTree = "<group>";
 		};
+		82C17C701D1C773E00512BD4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		82C17C721D1C776500512BD4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				82C17C731D1C78E500512BD4 /* App.swift */,
+				82C17C751D1C7B9E00512BD4 /* Category.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CFA462AAAA30ADE5BED281F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F62EFCED3F4603890EDBAF9E /* Pods-grability.debug.xcconfig */,
+				3644AB852E8D4B43C16AA0D7 /* Pods-grability.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82C17C6D1D1C772200512BD4 /* Build configuration list for PBXNativeTarget "grability" */;
 			buildPhases = (
+				D4AB22D4A71A43556D6D8631 /* 📦 Check Pods Manifest.lock */,
 				82C17C541D1C772200512BD4 /* Sources */,
 				82C17C551D1C772200512BD4 /* Frameworks */,
 				82C17C561D1C772200512BD4 /* Resources */,
+				C03F85071BDEDDAC1D8206B8 /* 📦 Embed Pods Frameworks */,
+				5863A0DCE4313D287CF98CFE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,12 +182,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5863A0DCE4313D287CF98CFE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-grability/Pods-grability-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C03F85071BDEDDAC1D8206B8 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-grability/Pods-grability-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4AB22D4A71A43556D6D8631 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		82C17C541D1C772200512BD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				82C17C641D1C772200512BD4 /* grability.xcdatamodeld in Sources */,
+				82C17C761D1C7B9E00512BD4 /* Category.swift in Sources */,
+				82C17C741D1C78E500512BD4 /* App.swift in Sources */,
 				82C17C5E1D1C772200512BD4 /* ViewController.swift in Sources */,
 				82C17C5C1D1C772200512BD4 /* AppDelegate.swift in Sources */,
 			);
@@ -253,6 +352,7 @@
 		};
 		82C17C6E1D1C772200512BD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F62EFCED3F4603890EDBAF9E /* Pods-grability.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = grability/Info.plist;
@@ -264,6 +364,7 @@
 		};
 		82C17C6F1D1C772200512BD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3644AB852E8D4B43C16AA0D7 /* Pods-grability.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = grability/Info.plist;
@@ -292,6 +393,7 @@
 				82C17C6F1D1C772200512BD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
