@@ -9,15 +9,17 @@
 import UIKit
 
 class App: NSObject {
-    var name : String
+    var id: Int
+    var title : String
     var summary: String
-    var id_category: Int
+    var category: Category
     var rights: String
     var image : UIImage?
-    init(name: String, summary:String, id_category:Int, rights: String, image : UIImage?) {
-        self.name = name
+    init(id:Int, title: String, summary:String, id_category:Int, term:String, rights: String, image : UIImage?) {
+        self.id = id
+        self.title = title
         self.summary = summary
-        self.id_category = id_category
+        self.category = Category(id_category: id_category, term: term)
         self.rights = rights
         if (image != nil){
             self.image = image!

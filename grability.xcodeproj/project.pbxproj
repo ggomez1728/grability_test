@@ -15,6 +15,7 @@
 		82C17C691D1C772200512BD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C17C671D1C772200512BD4 /* LaunchScreen.storyboard */; };
 		82C17C741D1C78E500512BD4 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C17C731D1C78E500512BD4 /* App.swift */; };
 		82C17C761D1C7B9E00512BD4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C17C751D1C7B9E00512BD4 /* Category.swift */; };
+		82C17C781D1C89F600512BD4 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C17C771D1C89F600512BD4 /* DataRequest.swift */; };
 		E05837B60E0BE95BE546FDCB /* Pods_grability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29339665F197153854D6F92E /* Pods_grability.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		82C17C6A1D1C772200512BD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82C17C731D1C78E500512BD4 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		82C17C751D1C7B9E00512BD4 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		82C17C771D1C89F600512BD4 /* DataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		F62EFCED3F4603890EDBAF9E /* Pods-grability.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grability.debug.xcconfig"; path = "Pods/Target Support Files/Pods-grability/Pods-grability.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 			children = (
 				82C17C731D1C78E500512BD4 /* App.swift */,
 				82C17C751D1C7B9E00512BD4 /* Category.swift */,
+				82C17C771D1C89F600512BD4 /* DataRequest.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				82C17C641D1C772200512BD4 /* grability.xcdatamodeld in Sources */,
 				82C17C761D1C7B9E00512BD4 /* Category.swift in Sources */,
 				82C17C741D1C78E500512BD4 /* App.swift in Sources */,
+				82C17C781D1C89F600512BD4 /* DataRequest.swift in Sources */,
 				82C17C5E1D1C772200512BD4 /* ViewController.swift in Sources */,
 				82C17C5C1D1C772200512BD4 /* AppDelegate.swift in Sources */,
 			);
