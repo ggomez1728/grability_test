@@ -30,12 +30,33 @@ class DataPersistence: NSObject {
         }
     }
     
+    func getCategories() -> [Category] {
+        var categories:[Category] = []
+        let AppEntity = NSEntityDescription.entityForName("Category", inManagedObjectContext: self.context!)
+
+        let requestApp = AppEntity?.managedObjectModel.fetchRequestTemplateForName("reqCategories")
+        do{
+            let categoriesEntity = try self.context?.executeFetchRequest(requestApp!)
+            for readCategoryEntity in categoriesEntity!{
+                let id = readCategoryEntity.valueForKey("id")!.integerValue
+                let term = readCategoryEntity.valueForKey("term")! as! String
+                let readCategory = Category(id: id, term: term)
+                categories.append(readCategory)
+            }
+        }
+        catch{
+            print("Fail reading coreData <<getCategories>>")
+        }
+        
+        return categories
+    }
+    
     func getAllApps() -> [App] {
         var apps:[App]=[]
-        let AppEntity = NSEntityDescription.entityForName("Category", inManagedObjectContext: self.context!)
-        let requestCategory = AppEntity?.managedObjectModel.fetchRequestTemplateForName("reqApps")
+        let AppEntity = NSEntityDescription.entityForName("App", inManagedObjectContext: self.context!)
+        let requestApp = AppEntity?.managedObjectModel.fetchRequestTemplateForName("reqApps")
         do{
-            let AppsEntity = try self.context?.executeFetchRequest(requestCategory!)
+            let AppsEntity = try self.context?.executeFetchRequest(requestApp!)
             for readAppEntity in AppsEntity!{
                 let id = readAppEntity.valueForKey("id")!.integerValue
                 let title = readAppEntity.valueForKey("title")! as! String
@@ -47,20 +68,25 @@ class DataPersistence: NSObject {
                     image = UIImage(data: readAppEntity.valueForKey("image") as! NSData)
                 }
                 let id_category = readAppEntity.valueForKey("id_category")!.integerValue
+                
+                //let categoryEntity = readAppEntity.valueForKey("belongs_to")
+                //let term = categoryEntity.first.valueForKey("term") as! String
+
+
                 // fail in belongsTo
                 let readApp = App(id: id, title: title, summary: summary, id_category: id_category, term: "", rights: rights, url_image: url_image, image: image)
                 apps.append(readApp)
             }
         }
         catch{
-            print("Fail reading coreData")
+            print("Fail reading coreData <<getAllApps>>")
         }
         return apps
     }
     
     func getAppsForCategory(id_category id_category:Int) -> [App] {
         var apps:[App]=[]
-        let AppEntity = NSEntityDescription.entityForName("Category", inManagedObjectContext: self.context!)
+        let AppEntity = NSEntityDescription.entityForName("App", inManagedObjectContext: self.context!)
         let requestCategory = AppEntity?.managedObjectModel.fetchRequestFromTemplateWithName("reqAppsForCategory", substitutionVariables: ["id_category": id_category])
 
         do{
@@ -81,7 +107,7 @@ class DataPersistence: NSObject {
             }
         }
         catch{
-            print("Fail reading coreData")
+            print("Fail reading coreData <<getAppsForCategory>>")
         }
         return apps
     }

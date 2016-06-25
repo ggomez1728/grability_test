@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let url_string:String = "https://itunes.apple.com/us/rss/topfreeapplications"
         let data_web :DataRequest = DataRequest()
         //x_image is 1X = 1, 2X = 2, 3X = 3
-        let data_t = data_web.getData(x_image: 1, url_string: url_string, numberOfElements: 5)
+        let data_t = data_web.getData(x_image: 1, url_string: url_string, numberOfElements: 20)
         let apps = data_t.apps
 
         let persistence = DataPersistence(context: self.context)
@@ -34,6 +34,11 @@ class ViewController: UIViewController {
         for dato in DatosForCategory{
             print(dato.rights)
         }
+        let DatosCategories = persistence.getCategories()
+        for dato in DatosCategories{
+            print("\(dato.id)>>\(dato.term)")
+        }
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
