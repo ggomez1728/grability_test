@@ -7,6 +7,7 @@
         <attribute name="rights" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url_image" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="belongs_to" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="has_many" inverseEntity="Category" syncable="YES"/>
     </entity>
     <entity name="Category" syncable="YES">
@@ -20,7 +21,7 @@
     <fetchRequest name="reqCategories" entity="Category"/>
     <fetchRequest name="reqCategory" entity="Category" predicateString="id == $id"/>
     <elements>
-        <element name="App" positionX="-90" positionY="-207" width="128" height="150"/>
+        <element name="App" positionX="-90" positionY="-207" width="128" height="165"/>
         <element name="Category" positionX="135" positionY="-180" width="128" height="88"/>
     </elements>
 </model>

@@ -9,13 +9,12 @@
 import UIKit
 
 class DataRequest: NSObject {
-    var url_string: String
-    init(url_string: String) {
-        self.url_string = url_string
-    }
-    func getData(x_image x_image:Int)->(apps: [App], response: String){
+
+    func getData(x_image x_image:Int, url_string: String, numberOfElements:Int, numberOfPage:Int = 1)->(apps: [App], response: String){
+
         var apps:[App]=[]
-        let url = NSURL(string: self.url_string)
+        let url2 = "\(url_string)/limit=\(numberOfElements)/json?page=\(numberOfPage)"
+        let url = NSURL(string: url2)
         let data_json = NSData(contentsOfURL: url!)
         if (data_json == nil){
             print("No hay conexión a internet o el servidor no está accesible.")
@@ -50,35 +49,36 @@ class DataRequest: NSObject {
                                 let element_category = dic_cat_attributes["label"] as! NSString as String
                                 //load image
                                 let images = element["im:image"] as! NSArray
-                                var element_image: UIImage?
+                                var url_image:String = ""
                                 if (images.count > 0){
                                     let dic_image = images[x_image-1] as! NSDictionary
-                                    let image_url = dic_image["label"] as! NSString as String
-                                    if (image_url != ""){
-                                        let url_img = NSURL(string: image_url)
-                                        let data_img = NSData(contentsOfURL: url_img!)
-                                        //make sure your image in this url does exist, otherwise unwrap in a if let check
-                                        element_image = UIImage(data: data_img!)!
-                                    }
+                                    url_image =  dic_image["label"] as! NSString as String
                                 }
                                 //load app in array
-                                apps.append(App(id: Int(element_id)!, title: element_title, summary: element_summary, id_category: Int(element_id_category)!, term: element_category, rights: element_rights, image: element_image))
+                                apps.append(App(id: Int(element_id)!, title: element_title, summary: element_summary, id_category: Int(element_id_category)!, term: element_category, rights: element_rights, url_image: url_image))
                             }
                         }
-                        
                     }
                     else{
-                        print("fail")
+                        print("fail read a image")
                     }
                 }
-
-                
             }
             catch{
-                
+             print("fail in reading Json")
             }
-            
         }
         return (apps, "ok")
+    }
+    
+    func getImage(url_image:String) -> UIImage? {
+        var element_image: UIImage?
+        if (url_image != ""){
+            let url_img = NSURL(string: url_image)
+            let data_img = NSData(contentsOfURL: url_img!)
+            //make sure your image in this url does exist, otherwise unwrap in a if let check
+            element_image = UIImage(data: data_img!)!
+        }
+        return element_image
     }
 }

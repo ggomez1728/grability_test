@@ -10,8 +10,10 @@ import UIKit
 import CoreData
 
 class DataPersistence: NSObject {
+    
     var context:NSManagedObjectContext?
-    init(apps:[App], context:NSManagedObjectContext?){
+    
+    init(context:NSManagedObjectContext?){
         self.context = context
     }
     
@@ -22,6 +24,7 @@ class DataPersistence: NSObject {
                 self.saveCategory(app)
             }
             if (!self.testAppExists(app.id)){
+                //not exist app then save it
                 self.saveApp(app)
             }
         }
@@ -38,20 +41,20 @@ class DataPersistence: NSObject {
                 let title = readAppEntity.valueForKey("title")! as! String
                 let summary = readAppEntity.valueForKey("summary")! as! String
                 let rights = readAppEntity.valueForKey("rights")! as! String
+                let url_image = readAppEntity.valueForKey("url_image")! as! String
                 var image : UIImage? = nil
                 if readAppEntity.valueForKey("image") != nil {
                     image = UIImage(data: readAppEntity.valueForKey("image") as! NSData)
                 }
                 let id_category = readAppEntity.valueForKey("id_category")!.integerValue
-                let readApp = App(id: id, title: title, summary: summary, id_category: id_category, term: "", rights: rights, image: image)
+                // fail in belongsTo
+                let readApp = App(id: id, title: title, summary: summary, id_category: id_category, term: "", rights: rights, url_image: url_image, image: image)
                 apps.append(readApp)
             }
-            
         }
         catch{
             print("Fail reading coreData")
         }
-    
         return apps
     }
     
@@ -67,12 +70,13 @@ class DataPersistence: NSObject {
                 let title = readAppEntity.valueForKey("title")! as! String
                 let summary = readAppEntity.valueForKey("summary")! as! String
                 let rights = readAppEntity.valueForKey("rights")! as! String
+                let url_image = readAppEntity.valueForKey("url_image")! as! String
                 var image : UIImage? = nil
                 if readAppEntity.valueForKey("image") != nil {
                     image = UIImage(data: readAppEntity.valueForKey("image") as! NSData)
                 }
                 let id_category = readAppEntity.valueForKey("id_category")!.integerValue
-                let readApp = App(id: id, title: title, summary: summary, id_category: id_category, term: "", rights: rights, image: image)
+                let readApp = App(id: id, title: title, summary: summary, id_category: id_category, term: "", rights: rights, url_image: url_image, image: image)
                 apps.append(readApp)
             }
         }
@@ -150,7 +154,11 @@ class DataPersistence: NSObject {
         appEntity.setValue(app.title, forKey: "title")
         appEntity.setValue(app.rights, forKey: "rights")
         appEntity.setValue(app.summary, forKey: "summary")
-        appEntity.setValue(UIImagePNGRepresentation(app.image!) , forKey: "image")
+        appEntity.setValue(app.url_image, forKey: "url_image")
+
+        let imageRequest = DataRequest()
+        let image = imageRequest.getImage(app.url_image)
+        appEntity.setValue(UIImagePNGRepresentation(image!) , forKey: "image")
         return appEntity
     }
 

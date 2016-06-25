@@ -15,14 +15,17 @@ class App: NSObject {
     var category: Category
     var rights: String
     var image : UIImage?
-    init(id:Int, title: String, summary:String, id_category:Int, term:String, rights: String, image : UIImage?) {
+    var url_image:String
+    init(id:Int, title: String, summary:String, id_category:Int, term:String, rights: String, url_image : String, image : UIImage?=nil) {
         self.id = id
         self.title = title
         self.summary = summary
         self.category = Category(id: id_category, term: term)
         self.rights = rights
-        if (image != nil){
-            self.image = image!
-        }
+        self.url_image = url_image
+    }
+    
+    func setImageForApp(image : UIImage){
+        self.image = image
     }
 }
