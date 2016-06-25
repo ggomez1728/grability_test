@@ -19,7 +19,7 @@ class App: NSObject {
         self.id = id
         self.title = title
         self.summary = summary
-        self.category = Category(id_category: id_category, term: term)
+        self.category = Category(id: id_category, term: term)
         self.rights = rights
         if (image != nil){
             self.image = image!
