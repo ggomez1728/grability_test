@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15D21" minimumToolsVersion="Automatic">
+    <entity name="App" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id_category" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="rights" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url_image" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="belongs_to" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="has_many" inverseEntity="Category" syncable="YES"/>
+    </entity>
+    <entity name="Category" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="term" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="has_many" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="App" inverseName="belongs_to" inverseEntity="App" syncable="YES"/>
+    </entity>
+    <fetchRequest name="reqApp" entity="App" predicateString="id == $id"/>
+    <fetchRequest name="reqApps" entity="App"/>
+    <fetchRequest name="reqAppsForCategory" entity="App" predicateString="id_category == $id_category"/>
+    <fetchRequest name="reqCategories" entity="Category"/>
+    <fetchRequest name="reqCategory" entity="Category" predicateString="id == $id"/>
+    <elements>
+        <element name="App" positionX="-90" positionY="-207" width="128" height="165"/>
+        <element name="Category" positionX="135" positionY="-180" width="128" height="90"/>
+    </elements>
 </model>

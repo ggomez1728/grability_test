@@ -9,10 +9,10 @@
 import UIKit
 
 class Category: NSObject {
-    var id_category: Int
+    var id: Int
     var term: String
-    init(id_category:Int, term:String) {
-        self.id_category = id_category
+    init(id:Int, term:String) {
+        self.id = id
         self.term = term
     }
 }

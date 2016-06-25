@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821BFDDC1D1DE27000BF8E25 /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821BFDDB1D1DE27000BF8E25 /* DataPersistence.swift */; };
 		82C17C5C1D1C772200512BD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C17C5B1D1C772200512BD4 /* AppDelegate.swift */; };
 		82C17C5E1D1C772200512BD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C17C5D1D1C772200512BD4 /* ViewController.swift */; };
 		82C17C611D1C772200512BD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C17C5F1D1C772200512BD4 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		29339665F197153854D6F92E /* Pods_grability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3644AB852E8D4B43C16AA0D7 /* Pods-grability.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grability.release.xcconfig"; path = "Pods/Target Support Files/Pods-grability/Pods-grability.release.xcconfig"; sourceTree = "<group>"; };
+		821BFDDB1D1DE27000BF8E25 /* DataPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
 		82C17C581D1C772200512BD4 /* grability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C17C5B1D1C772200512BD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C17C5D1D1C772200512BD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				82C17C731D1C78E500512BD4 /* App.swift */,
 				82C17C751D1C7B9E00512BD4 /* Category.swift */,
 				82C17C771D1C89F600512BD4 /* DataRequest.swift */,
+				821BFDDB1D1DE27000BF8E25 /* DataPersistence.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				82C17C641D1C772200512BD4 /* grability.xcdatamodeld in Sources */,
 				82C17C761D1C7B9E00512BD4 /* Category.swift in Sources */,
 				82C17C741D1C78E500512BD4 /* App.swift in Sources */,
+				821BFDDC1D1DE27000BF8E25 /* DataPersistence.swift in Sources */,
 				82C17C781D1C89F600512BD4 /* DataRequest.swift in Sources */,
 				82C17C5E1D1C772200512BD4 /* ViewController.swift in Sources */,
 				82C17C5C1D1C772200512BD4 /* AppDelegate.swift in Sources */,
