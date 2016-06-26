@@ -13,11 +13,11 @@ class DataRequest: NSObject {
     func getData(x_image x_image:Int, url_string: String, numberOfElements:Int, numberOfPage:Int = 1)->(apps: [App], response: String){
 
         var apps:[App]=[]
-        let url2 = "\(url_string)/limit=\(numberOfElements)/json?page=\(numberOfPage)"
-        let url = NSURL(string: url2)
+        let url = NSURL(string:"\(url_string)/limit=\(numberOfElements)/json?page=\(numberOfPage)")
         let data_json = NSData(contentsOfURL: url!)
         if (data_json == nil){
             print("No hay conexión a internet o el servidor no está accesible.")
+            return (apps, "fail")
         }
         else{
             do{

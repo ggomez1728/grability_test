@@ -1,27 +1,147 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HOS-eK-cBW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Categories View Controller-->
+        <scene sceneID="cpQ-uT-I4z">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="grability" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iJN-Yv-zlh" customClass="CategoriesViewController" customModule="grability" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Pxs-gd-7d5"/>
+                        <viewControllerLayoutGuide type="bottom" id="GBM-0T-RFi"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="SzE-B2-eF9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8n4-DF-t0v">
+                                <rect key="frame" x="0.0" y="64" width="600" height="222"/>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_categories.png" translatesAutoresizingMaskIntoConstraints="NO" id="Agw-pu-E5e">
+                                <rect key="frame" x="0.0" y="307" width="600" height="293"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="293" id="eaX-ij-Rcu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.96078431369999995" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Agw-pu-E5e" firstAttribute="trailing" secondItem="8n4-DF-t0v" secondAttribute="trailing" id="7YA-ra-Qa6"/>
+                            <constraint firstItem="8n4-DF-t0v" firstAttribute="top" secondItem="Pxs-gd-7d5" secondAttribute="bottom" id="8Ms-x1-qzi"/>
+                            <constraint firstItem="8n4-DF-t0v" firstAttribute="centerX" secondItem="SzE-B2-eF9" secondAttribute="centerX" id="93Y-Vt-mIL"/>
+                            <constraint firstItem="Agw-pu-E5e" firstAttribute="leading" secondItem="8n4-DF-t0v" secondAttribute="leading" id="EnL-kq-KOL"/>
+                            <constraint firstItem="Agw-pu-E5e" firstAttribute="top" secondItem="8n4-DF-t0v" secondAttribute="bottom" constant="21" id="emS-MU-rBT"/>
+                            <constraint firstAttribute="bottom" secondItem="Agw-pu-E5e" secondAttribute="bottom" id="gJn-hM-mpK"/>
+                            <constraint firstItem="Agw-pu-E5e" firstAttribute="leading" secondItem="SzE-B2-eF9" secondAttribute="leading" id="sih-aA-ju7"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pickerCategories" destination="8n4-DF-t0v" id="aZg-R3-m0B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SJh-sr-NVK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2132" y="-560"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="81M-cK-eN1">
+            <objects>
+                <navigationController id="HOS-eK-cBW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hmY-VW-YRm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RjT-Cm-glL" kind="relationship" relationship="rootViewController" id="2vS-n8-I33"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="otz-jY-wSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="-560"/>
+        </scene>
+        <!--Apps Collection View-->
+        <scene sceneID="QcF-kw-Jhd">
+            <objects>
+                <collectionViewController id="RjT-Cm-glL" customClass="AppsCollectionView" customModule="grability" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Zrv-5x-hzh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YK6-cg-2Up">
+                            <size key="itemSize" width="360" height="118"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo_grability.jpg" id="mRG-ic-1Aw">
+                            <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="GvB-ta-x6v" customClass="AppViewCell" customModule="grability" customModuleProvider="target">
+                                <rect key="frame" x="120" y="64" width="360" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="360" height="118"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0PH-Rw-qI3">
+                                            <rect key="frame" x="25" y="8" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="zaA-Dr-7e7"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvM-N3-Lep">
+                                            <rect key="frame" x="135" y="8" width="206" height="102"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.67843137249999996" green="0.76078431369999999" blue="0.87058823529999996" alpha="0.60429086538461541" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="AvM-N3-Lep" firstAttribute="leading" secondItem="0PH-Rw-qI3" secondAttribute="trailing" constant="10" id="8zg-VO-2mv"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="0PH-Rw-qI3" secondAttribute="bottom" constant="2" id="OAl-Gh-epi"/>
+                                    <constraint firstItem="0PH-Rw-qI3" firstAttribute="leading" secondItem="GvB-ta-x6v" secondAttribute="leadingMargin" constant="17" id="VYr-Kr-owk"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="AvM-N3-Lep" secondAttribute="trailing" constant="11" id="ZjS-lR-uG2"/>
+                                    <constraint firstItem="0PH-Rw-qI3" firstAttribute="top" secondItem="AvM-N3-Lep" secondAttribute="top" id="g2b-q1-lsN"/>
+                                    <constraint firstItem="0PH-Rw-qI3" firstAttribute="top" secondItem="GvB-ta-x6v" secondAttribute="topMargin" id="rqV-kf-szo"/>
+                                    <constraint firstItem="AvM-N3-Lep" firstAttribute="bottom" secondItem="GvB-ta-x6v" secondAttribute="bottomMargin" id="wV1-IB-f0g"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageApp" destination="0PH-Rw-qI3" id="WcD-pX-pW8"/>
+                                    <outlet property="titleApp" destination="AvM-N3-Lep" id="5uH-eU-uVH"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="RjT-Cm-glL" id="t61-be-tdd"/>
+                            <outlet property="delegate" destination="RjT-Cm-glL" id="yS2-1R-Ubh"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="OdZ-2f-kkN">
+                        <barButtonItem key="rightBarButtonItem" title="Categories" id="1x7-T8-aPg">
+                            <connections>
+                                <segue destination="iJN-Yv-zlh" kind="show" id="Nl3-rd-7vc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vtz-hf-fZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="600" y="374"/>
+            <point key="canvasLocation" x="1328" y="-564"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background_categories.png" width="1080" height="552"/>
+        <image name="fondo_grability.jpg" width="300" height="300"/>
+    </resources>
 </document>

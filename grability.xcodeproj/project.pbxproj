@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		821BFDDC1D1DE27000BF8E25 /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821BFDDB1D1DE27000BF8E25 /* DataPersistence.swift */; };
+		82B87E471D1F645000F4A2DE /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B87E461D1F645000F4A2DE /* CategoriesViewController.swift */; };
+		82B87E491D1F6CB400F4A2DE /* background_categories.png in Resources */ = {isa = PBXBuildFile; fileRef = 82B87E481D1F6CB400F4A2DE /* background_categories.png */; };
+		82B87E4B1D1F725C00F4A2DE /* AppsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B87E4A1D1F725C00F4A2DE /* AppsCollectionView.swift */; };
+		82B87E4D1D1F730100F4A2DE /* AppViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B87E4C1D1F730100F4A2DE /* AppViewCell.swift */; };
+		82B87E511D1F9C7400F4A2DE /* fondo_grability.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82B87E501D1F9C7400F4A2DE /* fondo_grability.jpg */; };
 		82C17C5C1D1C772200512BD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C17C5B1D1C772200512BD4 /* AppDelegate.swift */; };
 		82C17C5E1D1C772200512BD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C17C5D1D1C772200512BD4 /* ViewController.swift */; };
 		82C17C611D1C772200512BD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C17C5F1D1C772200512BD4 /* Main.storyboard */; };
@@ -24,6 +29,11 @@
 		29339665F197153854D6F92E /* Pods_grability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3644AB852E8D4B43C16AA0D7 /* Pods-grability.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grability.release.xcconfig"; path = "Pods/Target Support Files/Pods-grability/Pods-grability.release.xcconfig"; sourceTree = "<group>"; };
 		821BFDDB1D1DE27000BF8E25 /* DataPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
+		82B87E461D1F645000F4A2DE /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		82B87E481D1F6CB400F4A2DE /* background_categories.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_categories.png; sourceTree = "<group>"; };
+		82B87E4A1D1F725C00F4A2DE /* AppsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsCollectionView.swift; sourceTree = "<group>"; };
+		82B87E4C1D1F730100F4A2DE /* AppViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewCell.swift; sourceTree = "<group>"; };
+		82B87E501D1F9C7400F4A2DE /* fondo_grability.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_grability.jpg; sourceTree = "<group>"; };
 		82C17C581D1C772200512BD4 /* grability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C17C5B1D1C772200512BD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C17C5D1D1C772200512BD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +68,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		82B87DD61D1F00B400F4A2DE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				82B87E501D1F9C7400F4A2DE /* fondo_grability.jpg */,
+				82B87E481D1F6CB400F4A2DE /* background_categories.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		82C17C4F1D1C772200512BD4 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +98,7 @@
 		82C17C5A1D1C772200512BD4 /* grability */ = {
 			isa = PBXGroup;
 			children = (
+				82B87DD61D1F00B400F4A2DE /* images */,
 				82C17C721D1C776500512BD4 /* Models */,
 				82C17C701D1C773E00512BD4 /* ViewControllers */,
 				82C17C5B1D1C772200512BD4 /* AppDelegate.swift */,
@@ -95,6 +115,9 @@
 		82C17C701D1C773E00512BD4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				82B87E461D1F645000F4A2DE /* CategoriesViewController.swift */,
+				82B87E4A1D1F725C00F4A2DE /* AppsCollectionView.swift */,
+				82B87E4C1D1F730100F4A2DE /* AppViewCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -181,6 +204,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				82C17C691D1C772200512BD4 /* LaunchScreen.storyboard in Resources */,
+				82B87E511D1F9C7400F4A2DE /* fondo_grability.jpg in Resources */,
+				82B87E491D1F6CB400F4A2DE /* background_categories.png in Resources */,
 				82C17C661D1C772200512BD4 /* Assets.xcassets in Resources */,
 				82C17C611D1C772200512BD4 /* Main.storyboard in Resources */,
 			);
@@ -247,6 +272,9 @@
 				821BFDDC1D1DE27000BF8E25 /* DataPersistence.swift in Sources */,
 				82C17C781D1C89F600512BD4 /* DataRequest.swift in Sources */,
 				82C17C5E1D1C772200512BD4 /* ViewController.swift in Sources */,
+				82B87E4D1D1F730100F4A2DE /* AppViewCell.swift in Sources */,
+				82B87E471D1F645000F4A2DE /* CategoriesViewController.swift in Sources */,
+				82B87E4B1D1F725C00F4A2DE /* AppsCollectionView.swift in Sources */,
 				82C17C5C1D1C772200512BD4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

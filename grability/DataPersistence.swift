@@ -181,7 +181,6 @@ class DataPersistence: NSObject {
         appEntity.setValue(app.rights, forKey: "rights")
         appEntity.setValue(app.summary, forKey: "summary")
         appEntity.setValue(app.url_image, forKey: "url_image")
-
         let imageRequest = DataRequest()
         let image = imageRequest.getImage(app.url_image)
         appEntity.setValue(UIImagePNGRepresentation(image!) , forKey: "image")

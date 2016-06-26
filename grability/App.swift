@@ -23,6 +23,8 @@ class App: NSObject {
         self.category = Category(id: id_category, term: term)
         self.rights = rights
         self.url_image = url_image
+        self.image = image
+
     }
     
     func setImageForApp(image : UIImage){

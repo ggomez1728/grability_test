@@ -22,10 +22,18 @@ class ViewController: UIViewController {
         let data_web :DataRequest = DataRequest()
         //x_image is 1X = 1, 2X = 2, 3X = 3
         let data_t = data_web.getData(x_image: 1, url_string: url_string, numberOfElements: 20)
-        let apps = data_t.apps
-
         let persistence = DataPersistence(context: self.context)
-        persistence.saveApps(apps)
+        if (data_t.response == "fail") {
+            let alert = UIAlertController(title: "Error conexión", message: "No hay conexión a internet o el servidor no está accesible.", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        else
+        {
+            let apps = data_t.apps
+            persistence.saveApps(apps)
+        }
+
         let allDatos = persistence.getAllApps()
         for dato in allDatos{
             print(dato.category.id)
@@ -37,6 +45,20 @@ class ViewController: UIViewController {
         let DatosCategories = persistence.getCategories()
         for dato in DatosCategories{
             print("\(dato.id)>>\(dato.term)")
+        }
+        
+        switch UIDevice.currentDevice().userInterfaceIdiom {
+        case .Phone:
+            // It's an iPhone
+            print("es un iPhone")
+        case .Pad:
+            // It's an iPad
+            print("es un iPad")
+            
+        default:
+            // Uh, oh! What could it be?
+            print("error")
+            
         }
 
         // Do any additional setup after loading the view, typically from a nib.
