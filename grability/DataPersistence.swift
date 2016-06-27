@@ -32,6 +32,7 @@ class DataPersistence: NSObject {
     
     func getCategories() -> [Category] {
         var categories:[Category] = []
+        categories.append(Category(id: 0, term: "All"))
         let AppEntity = NSEntityDescription.entityForName("Category", inManagedObjectContext: self.context!)
 
         let requestApp = AppEntity?.managedObjectModel.fetchRequestTemplateForName("reqCategories")

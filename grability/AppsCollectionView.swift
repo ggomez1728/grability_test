@@ -11,15 +11,32 @@ import CoreData
 
 private let reuseIdentifier = "Cell"
 
-class AppsCollectionView: UICollectionViewController {
+class AppsCollectionView: UICollectionViewController, GetDataFromCategories {
 
     var viewType:String = "List"
     
     var context :NSManagedObjectContext? = nil
+    var refreshControl:UIRefreshControl!
 
+    
     var apps:[App] = []
     var indexApp:Int = 0
+    let refresher = UIRefreshControl()
+    var numberRequest:Int=1
     
+    func getDataFromCategories(id: Int) {
+        let persistence = DataPersistence(context: self.context)
+        if id != 0{
+            self.apps = persistence.getAppsForCategory(id_category: id)
+        }
+        else{
+            self.apps = persistence.getAllApps()
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        collectionView?.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,17 +50,21 @@ class AppsCollectionView: UICollectionViewController {
         // Do any additional setup after loading the view.
         
         collectionView?.allowsMultipleSelection = false
+        self.context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
         self.getTypeDevice()
         self.configLayout()
-
-        self.context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+        self.configRefresh()
+        self.getDataJSON(page: numberRequest, numberOfElements: 20)
+    }
+    
+    func getDataJSON(page page:Int, numberOfElements:Int){
         let url_string:String = "https://itunes.apple.com/us/rss/topfreeapplications"
         let data_web :DataRequest = DataRequest()
         let persistence = DataPersistence(context: self.context)
         //x_image is 1X = 1, 2X = 2, 3X = 3
-        let data_t = data_web.getData(x_image: 2, url_string: url_string, numberOfElements: 20)
-
+        let data_t = data_web.getData(x_image: 2, url_string: url_string, numberOfElements: numberOfElements, numberOfPage: page)
+        
         if (data_t.response == "fail") {
             let alert = UIAlertController(title: "Error de conexión", message: "No hay conexión a internet o el servidor no está accesible.", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Aceptar", style: .Default, handler: nil))
@@ -53,10 +74,9 @@ class AppsCollectionView: UICollectionViewController {
         {
             let apps = data_t.apps
             persistence.saveApps(apps)
+            numberRequest += 1
         }
-        persistence.saveApps(apps)
         self.apps = persistence.getAllApps()
-
     }
     
     func configLayout()  {
@@ -68,13 +88,30 @@ class AppsCollectionView: UICollectionViewController {
         collectionView!.collectionViewLayout = layout
     }
     
+    func configRefresh() {
+        self.collectionView!.alwaysBounceVertical = true
+        refresher.tintColor = UIColor.grayColor()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: #selector(loadData), forControlEvents: .ValueChanged)
+        collectionView!.addSubview(refresher)
+    }
     func getTypeDevice(){
         if (UIDevice.currentDevice().userInterfaceIdiom == .Pad) {
             self.viewType = "Grid"
         }
     }
     
+    func loadData()
+    {
+        //code to execute during refresher
+        self.getDataJSON(page: numberRequest, numberOfElements: 20)
+        stopRefresher()         //Call this to stop refresher
+    }
     
+    func stopRefresher()
+    {
+        refresher.endRefreshing()
+    }
     
 
     override func didReceiveMemoryWarning() {
@@ -139,7 +176,10 @@ class AppsCollectionView: UICollectionViewController {
     }
     
     @IBAction func getCategory(sender: AnyObject) {
+        let persistence = DataPersistence(context: self.context)
         let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("CategoriesViewController") as? CategoriesViewController
+        nextViewController?.delegate = self
+        nextViewController?.categories = persistence.getCategories()
         self.navigationController?.pushViewController(nextViewController!, animated: true)
     }
  

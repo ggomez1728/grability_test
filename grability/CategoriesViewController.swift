@@ -8,11 +8,18 @@
 
 import UIKit
 
+protocol GetDataFromCategories {
+    func getDataFromCategories (id:Int)
+}
+
 class CategoriesViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var pickerCategories: UIPickerView!
-    var colors = ["Red","Yellow","Green","Blue"]
+    var categories:[Category]=[]
+    var delegate:GetDataFromCategories?
+    var indexForPicker:Int = 0
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +30,10 @@ class CategoriesViewController: UIViewController, UIPickerViewDelegate, UIPicker
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillDisappear(animated: Bool) {
+        delegate?.getDataFromCategories(categories[indexForPicker].id)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,12 +45,18 @@ class CategoriesViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     // The number of rows of data
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return colors.count
+        return categories.count
     }
     
     // The data to return for the row and component (column) that's being passed in
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return colors[row]
+        return categories[row].term
+    }
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        // use the row to get the selected row from the picker view
+        // using the row extract the value from your datasource (array[row])
+        self.indexForPicker = row
     }
    
     /*
