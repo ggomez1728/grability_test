@@ -72,11 +72,15 @@ class AppsCollectionView: UICollectionViewController, GetDataFromCategories {
         }
         else
         {
-            let apps = data_t.apps
-            persistence.saveApps(apps)
+            for dato in data_t.apps{
+                print(dato.title)
+            }
+            persistence.saveApps(data_t.apps)
             numberRequest += 1
         }
         self.apps = persistence.getAllApps()
+
+        
     }
     
     func configLayout()  {

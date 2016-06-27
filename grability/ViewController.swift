@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let url_string:String = "https://itunes.apple.com/us/rss/topfreeapplications"
         let data_web :DataRequest = DataRequest()
         //x_image is 1X = 1, 2X = 2, 3X = 3
-        let data_t = data_web.getData(x_image: 1, url_string: url_string, numberOfElements: 20)
+        let data_t = data_web.getData(x_image: 1, url_string: url_string, numberOfElements: 20, numberOfPage: 1)
         let persistence = DataPersistence(context: self.context)
         if (data_t.response == "fail") {
             let alert = UIAlertController(title: "Error conexión", message: "No hay conexión a internet o el servidor no está accesible.", preferredStyle: .Alert)

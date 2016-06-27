@@ -10,7 +10,7 @@ import UIKit
 
 class DataRequest: NSObject {
 
-    func getData(x_image x_image:Int, url_string: String, numberOfElements:Int, numberOfPage:Int = 1)->(apps: [App], response: String){
+    func getData(x_image x_image:Int, url_string: String, numberOfElements:Int, numberOfPage:Int )->(apps: [App], response: String){
 
         var apps:[App]=[]
         let url = NSURL(string:"\(url_string)/limit=\(numberOfElements)/json?page=\(numberOfPage)")
