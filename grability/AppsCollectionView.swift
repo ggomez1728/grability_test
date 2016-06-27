@@ -18,6 +18,7 @@ class AppsCollectionView: UICollectionViewController {
     var context :NSManagedObjectContext? = nil
 
     var apps:[App] = []
+    var indexApp:Int = 0
     
 
     override func viewDidLoad() {
@@ -31,7 +32,8 @@ class AppsCollectionView: UICollectionViewController {
 
         // Do any additional setup after loading the view.
         
-        
+        collectionView?.allowsMultipleSelection = false
+
         self.getTypeDevice()
         self.configLayout()
 
@@ -40,7 +42,7 @@ class AppsCollectionView: UICollectionViewController {
         let data_web :DataRequest = DataRequest()
         let persistence = DataPersistence(context: self.context)
         //x_image is 1X = 1, 2X = 2, 3X = 3
-        let data_t = data_web.getData(x_image: 1, url_string: url_string, numberOfElements: 20)
+        let data_t = data_web.getData(x_image: 2, url_string: url_string, numberOfElements: 20)
 
         if (data_t.response == "fail") {
             let alert = UIAlertController(title: "Error de conexión", message: "No hay conexión a internet o el servidor no está accesible.", preferredStyle: .Alert)
@@ -107,28 +109,40 @@ class AppsCollectionView: UICollectionViewController {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! AppViewCell
         
         // Configure the cell
-        cell.titleApp.text = self.apps[indexPath.item].title
-        cell.imageApp.image = self.apps[indexPath.item].image!
-        cell.imageApp.layer.cornerRadius = cell.imageApp.frame.size.width / 3
-        cell.imageApp.clipsToBounds = true
-        cell.imageApp.layer.borderWidth = 3.0
-        cell.imageApp.layer.borderColor = UIColor.whiteColor().CGColor
+        //cell.titleApp.text = self.apps[indexPath.item].title
+            
+            cell.imageApp.image = self.apps[indexPath.item].image!
+            cell.imageApp.layer.cornerRadius = cell.imageApp.frame.size.width / 3
+            cell.imageApp.clipsToBounds = true
+            cell.imageApp.layer.borderWidth = 3.0
+            cell.imageApp.layer.borderColor = UIColor.whiteColor().CGColor
+
+            cell.titleApp.text =  self.apps[indexPath.item].title
+        
         return cell
     }
     
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         if (self.viewType == "List") {
-            return CGSize(width: CGRectGetWidth(collectionView.frame), height: 100)
+            return CGSize(width: CGRectGetWidth(collectionView.frame), height: 120)
         }
-        return CGSize(width: ((CGRectGetWidth(collectionView.frame)/2)-2), height: 100)
+        return CGSize(width: ((CGRectGetWidth(collectionView.frame)/3)-2), height: 120)
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let url = self.apps[indexPath.item].id
-        print(url)
+        
+        let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("detailViewController") as? detailViewController
+        nextViewController?.detailApp=apps[indexPath.item]
+        self.navigationController?.pushViewController(nextViewController!, animated: true)
         
     }
-
+    
+    @IBAction func getCategory(sender: AnyObject) {
+        let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("CategoriesViewController") as? CategoriesViewController
+        self.navigationController?.pushViewController(nextViewController!, animated: true)
+    }
+ 
 
     // MARK: UICollectionViewDelegate
 
@@ -160,5 +174,20 @@ class AppsCollectionView: UICollectionViewController {
     
     }
     */
-
+    
+    /*
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if(segue.identifier == "idDetail"){
+            let cc = segue.destinationViewController as! detailViewController
+            
+    //     cc.route = self.routes[ip!.row]
+        }
+    }
+*/
+ 
 }

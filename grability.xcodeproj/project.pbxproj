@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820B1D631D20869F00548CD5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820B1D621D20869F00548CD5 /* CoreData.framework */; };
+		820B1D651D208AA300548CD5 /* ProgrammaticallyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820B1D641D208AA300548CD5 /* ProgrammaticallyObject.swift */; };
 		821BFDDC1D1DE27000BF8E25 /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821BFDDB1D1DE27000BF8E25 /* DataPersistence.swift */; };
 		82B87E471D1F645000F4A2DE /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B87E461D1F645000F4A2DE /* CategoriesViewController.swift */; };
 		82B87E491D1F6CB400F4A2DE /* background_categories.png in Resources */ = {isa = PBXBuildFile; fileRef = 82B87E481D1F6CB400F4A2DE /* background_categories.png */; };
 		82B87E4B1D1F725C00F4A2DE /* AppsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B87E4A1D1F725C00F4A2DE /* AppsCollectionView.swift */; };
 		82B87E4D1D1F730100F4A2DE /* AppViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B87E4C1D1F730100F4A2DE /* AppViewCell.swift */; };
 		82B87E511D1F9C7400F4A2DE /* fondo_grability.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 82B87E501D1F9C7400F4A2DE /* fondo_grability.jpg */; };
+		82B87E531D1FA7BD00F4A2DE /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B87E521D1FA7BD00F4A2DE /* detailViewController.swift */; };
 		82C17C5C1D1C772200512BD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C17C5B1D1C772200512BD4 /* AppDelegate.swift */; };
 		82C17C5E1D1C772200512BD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C17C5D1D1C772200512BD4 /* ViewController.swift */; };
 		82C17C611D1C772200512BD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C17C5F1D1C772200512BD4 /* Main.storyboard */; };
@@ -28,12 +31,15 @@
 /* Begin PBXFileReference section */
 		29339665F197153854D6F92E /* Pods_grability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_grability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3644AB852E8D4B43C16AA0D7 /* Pods-grability.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-grability.release.xcconfig"; path = "Pods/Target Support Files/Pods-grability/Pods-grability.release.xcconfig"; sourceTree = "<group>"; };
+		820B1D621D20869F00548CD5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		820B1D641D208AA300548CD5 /* ProgrammaticallyObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgrammaticallyObject.swift; sourceTree = "<group>"; };
 		821BFDDB1D1DE27000BF8E25 /* DataPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
 		82B87E461D1F645000F4A2DE /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		82B87E481D1F6CB400F4A2DE /* background_categories.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_categories.png; sourceTree = "<group>"; };
 		82B87E4A1D1F725C00F4A2DE /* AppsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsCollectionView.swift; sourceTree = "<group>"; };
 		82B87E4C1D1F730100F4A2DE /* AppViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewCell.swift; sourceTree = "<group>"; };
 		82B87E501D1F9C7400F4A2DE /* fondo_grability.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_grability.jpg; sourceTree = "<group>"; };
+		82B87E521D1FA7BD00F4A2DE /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		82C17C581D1C772200512BD4 /* grability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = grability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C17C5B1D1C772200512BD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C17C5D1D1C772200512BD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820B1D631D20869F00548CD5 /* CoreData.framework in Frameworks */,
 				E05837B60E0BE95BE546FDCB /* Pods_grability.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +70,7 @@
 		42F4A5F08C324B9DC50DC33F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				820B1D621D20869F00548CD5 /* CoreData.framework */,
 				29339665F197153854D6F92E /* Pods_grability.framework */,
 			);
 			name = Frameworks;
@@ -118,6 +126,7 @@
 				82B87E461D1F645000F4A2DE /* CategoriesViewController.swift */,
 				82B87E4A1D1F725C00F4A2DE /* AppsCollectionView.swift */,
 				82B87E4C1D1F730100F4A2DE /* AppViewCell.swift */,
+				82B87E521D1FA7BD00F4A2DE /* detailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -129,6 +138,7 @@
 				82C17C751D1C7B9E00512BD4 /* Category.swift */,
 				82C17C771D1C89F600512BD4 /* DataRequest.swift */,
 				821BFDDB1D1DE27000BF8E25 /* DataPersistence.swift */,
+				820B1D641D208AA300548CD5 /* ProgrammaticallyObject.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -177,6 +187,7 @@
 				TargetAttributes = {
 					82C17C571D1C772200512BD4 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2Y26Y4WHRZ;
 					};
 				};
 			};
@@ -269,8 +280,10 @@
 				82C17C641D1C772200512BD4 /* grability.xcdatamodeld in Sources */,
 				82C17C761D1C7B9E00512BD4 /* Category.swift in Sources */,
 				82C17C741D1C78E500512BD4 /* App.swift in Sources */,
+				82B87E531D1FA7BD00F4A2DE /* detailViewController.swift in Sources */,
 				821BFDDC1D1DE27000BF8E25 /* DataPersistence.swift in Sources */,
 				82C17C781D1C89F600512BD4 /* DataRequest.swift in Sources */,
+				820B1D651D208AA300548CD5 /* ProgrammaticallyObject.swift in Sources */,
 				82C17C5E1D1C772200512BD4 /* ViewController.swift in Sources */,
 				82B87E4D1D1F730100F4A2DE /* AppViewCell.swift in Sources */,
 				82B87E471D1F645000F4A2DE /* CategoriesViewController.swift in Sources */,
@@ -391,10 +404,13 @@
 			baseConfigurationReference = F62EFCED3F4603890EDBAF9E /* Pods-grability.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = grability/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RAMC-Software.grability";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -403,10 +419,13 @@
 			baseConfigurationReference = 3644AB852E8D4B43C16AA0D7 /* Pods-grability.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = grability/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.RAMC-Software.grability";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

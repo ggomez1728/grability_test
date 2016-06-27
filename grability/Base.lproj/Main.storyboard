@@ -9,7 +9,7 @@
         <!--Categories View Controller-->
         <scene sceneID="cpQ-uT-I4z">
             <objects>
-                <viewController id="iJN-Yv-zlh" customClass="CategoriesViewController" customModule="grability" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CategoriesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iJN-Yv-zlh" customClass="CategoriesViewController" customModule="grability" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pxs-gd-7d5"/>
                         <viewControllerLayoutGuide type="bottom" id="GBM-0T-RFi"/>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8n4-DF-t0v">
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8n4-DF-t0v">
                                 <rect key="frame" x="0.0" y="64" width="600" height="222"/>
                             </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_categories.png" translatesAutoresizingMaskIntoConstraints="NO" id="Agw-pu-E5e">
@@ -79,7 +79,7 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo_grability.jpg" id="mRG-ic-1Aw">
+                        <imageView key="backgroundView" userInteractionEnabled="NO" alpha="0.5" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo_grability.jpg" id="mRG-ic-1Aw">
                             <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -91,34 +91,34 @@
                                     <rect key="frame" x="0.0" y="0.0" width="360" height="118"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0PH-Rw-qI3">
-                                            <rect key="frame" x="25" y="8" width="100" height="100"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kcb-Pv-sdv">
+                                            <rect key="frame" x="8" y="14" width="90" height="90"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="zaA-Dr-7e7"/>
+                                                <constraint firstAttribute="width" constant="90" id="XEF-ea-d0o"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvM-N3-Lep">
-                                            <rect key="frame" x="135" y="8" width="206" height="102"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wA3-2t-fuN">
+                                            <rect key="frame" x="106" y="14" width="246" height="90"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.67843137249999996" green="0.76078431369999999" blue="0.87058823529999996" alpha="0.60429086538461541" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.022586915642023087" green="0.0040342477150261402" blue="0.0037304626312106848" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="AvM-N3-Lep" firstAttribute="leading" secondItem="0PH-Rw-qI3" secondAttribute="trailing" constant="10" id="8zg-VO-2mv"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="0PH-Rw-qI3" secondAttribute="bottom" constant="2" id="OAl-Gh-epi"/>
-                                    <constraint firstItem="0PH-Rw-qI3" firstAttribute="leading" secondItem="GvB-ta-x6v" secondAttribute="leadingMargin" constant="17" id="VYr-Kr-owk"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="AvM-N3-Lep" secondAttribute="trailing" constant="11" id="ZjS-lR-uG2"/>
-                                    <constraint firstItem="0PH-Rw-qI3" firstAttribute="top" secondItem="AvM-N3-Lep" secondAttribute="top" id="g2b-q1-lsN"/>
-                                    <constraint firstItem="0PH-Rw-qI3" firstAttribute="top" secondItem="GvB-ta-x6v" secondAttribute="topMargin" id="rqV-kf-szo"/>
-                                    <constraint firstItem="AvM-N3-Lep" firstAttribute="bottom" secondItem="GvB-ta-x6v" secondAttribute="bottomMargin" id="wV1-IB-f0g"/>
+                                    <constraint firstItem="Kcb-Pv-sdv" firstAttribute="bottom" secondItem="wA3-2t-fuN" secondAttribute="bottom" id="IBI-9v-sL4"/>
+                                    <constraint firstItem="wA3-2t-fuN" firstAttribute="trailing" secondItem="GvB-ta-x6v" secondAttribute="trailingMargin" id="K04-hQ-mfI"/>
+                                    <constraint firstItem="Kcb-Pv-sdv" firstAttribute="leading" secondItem="GvB-ta-x6v" secondAttribute="leadingMargin" id="LQ8-Ek-Szw"/>
+                                    <constraint firstItem="Kcb-Pv-sdv" firstAttribute="centerY" secondItem="GvB-ta-x6v" secondAttribute="centerY" id="Yqm-Sb-ArP"/>
+                                    <constraint firstItem="Kcb-Pv-sdv" firstAttribute="top" secondItem="GvB-ta-x6v" secondAttribute="topMargin" constant="6" id="deP-eS-EMc"/>
+                                    <constraint firstItem="wA3-2t-fuN" firstAttribute="leading" secondItem="Kcb-Pv-sdv" secondAttribute="trailing" constant="8" symbolic="YES" id="fvZ-dm-LnB"/>
+                                    <constraint firstItem="Kcb-Pv-sdv" firstAttribute="top" secondItem="wA3-2t-fuN" secondAttribute="top" id="gfD-1O-qTf"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="imageApp" destination="0PH-Rw-qI3" id="WcD-pX-pW8"/>
-                                    <outlet property="titleApp" destination="AvM-N3-Lep" id="5uH-eU-uVH"/>
+                                    <outlet property="imageApp" destination="Kcb-Pv-sdv" id="bdv-yY-gD1"/>
+                                    <outlet property="titleApp" destination="wA3-2t-fuN" id="XH6-2L-K2m"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -130,7 +130,7 @@
                     <navigationItem key="navigationItem" id="OdZ-2f-kkN">
                         <barButtonItem key="rightBarButtonItem" title="Categories" id="1x7-T8-aPg">
                             <connections>
-                                <segue destination="iJN-Yv-zlh" kind="show" id="Nl3-rd-7vc"/>
+                                <action selector="getCategory:" destination="RjT-Cm-glL" id="bVE-Au-FhR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -138,6 +138,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vtz-hf-fZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1328" y="-564"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Pem-5c-8NJ">
+            <objects>
+                <viewController storyboardIdentifier="detailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0Lm-NO-G6B" customClass="detailViewController" customModule="grability" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7tE-pP-sc9"/>
+                        <viewControllerLayoutGuide type="bottom" id="TCQ-ZA-vH3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q7r-b3-KR8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.96078431369999995" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LdN-fh-F7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328" y="152"/>
         </scene>
     </scenes>
     <resources>

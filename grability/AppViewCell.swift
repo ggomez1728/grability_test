@@ -11,4 +11,7 @@ import UIKit
 class AppViewCell: UICollectionViewCell {
     @IBOutlet weak var imageApp: UIImageView!
     @IBOutlet weak var titleApp: UILabel!
+    
+  
+    
 }
