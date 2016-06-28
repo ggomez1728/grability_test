@@ -18,25 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8n4-DF-t0v">
-                                <rect key="frame" x="0.0" y="64" width="600" height="222"/>
-                            </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_categories.png" translatesAutoresizingMaskIntoConstraints="NO" id="Agw-pu-E5e">
                                 <rect key="frame" x="0.0" y="307" width="600" height="293"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="293" id="eaX-ij-Rcu"/>
-                                </constraints>
                             </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8n4-DF-t0v">
+                                <rect key="frame" x="0.0" y="64" width="600" height="222"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="222" id="Ogy-Xz-DCg"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.96078431369999995" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Agw-pu-E5e" firstAttribute="trailing" secondItem="8n4-DF-t0v" secondAttribute="trailing" id="7YA-ra-Qa6"/>
-                            <constraint firstItem="8n4-DF-t0v" firstAttribute="top" secondItem="Pxs-gd-7d5" secondAttribute="bottom" id="8Ms-x1-qzi"/>
-                            <constraint firstItem="8n4-DF-t0v" firstAttribute="centerX" secondItem="SzE-B2-eF9" secondAttribute="centerX" id="93Y-Vt-mIL"/>
-                            <constraint firstItem="Agw-pu-E5e" firstAttribute="leading" secondItem="8n4-DF-t0v" secondAttribute="leading" id="EnL-kq-KOL"/>
-                            <constraint firstItem="Agw-pu-E5e" firstAttribute="top" secondItem="8n4-DF-t0v" secondAttribute="bottom" constant="21" id="emS-MU-rBT"/>
-                            <constraint firstAttribute="bottom" secondItem="Agw-pu-E5e" secondAttribute="bottom" id="gJn-hM-mpK"/>
-                            <constraint firstItem="Agw-pu-E5e" firstAttribute="leading" secondItem="SzE-B2-eF9" secondAttribute="leading" id="sih-aA-ju7"/>
+                            <constraint firstItem="Agw-pu-E5e" firstAttribute="top" secondItem="8n4-DF-t0v" secondAttribute="bottom" constant="21" id="1P7-iT-nYe"/>
+                            <constraint firstItem="8n4-DF-t0v" firstAttribute="trailing" secondItem="Agw-pu-E5e" secondAttribute="trailing" id="D3Z-5O-LcP"/>
+                            <constraint firstItem="8n4-DF-t0v" firstAttribute="leading" secondItem="SzE-B2-eF9" secondAttribute="leading" id="NuD-8h-NfS"/>
+                            <constraint firstAttribute="bottom" secondItem="Agw-pu-E5e" secondAttribute="bottom" id="hAF-tC-68O"/>
+                            <constraint firstAttribute="trailing" secondItem="8n4-DF-t0v" secondAttribute="trailing" id="k2I-WU-8Aj"/>
+                            <constraint firstItem="8n4-DF-t0v" firstAttribute="leading" secondItem="Agw-pu-E5e" secondAttribute="leading" id="mlp-6w-YOk"/>
+                            <constraint firstItem="8n4-DF-t0v" firstAttribute="top" secondItem="Pxs-gd-7d5" secondAttribute="bottom" constant="44" id="wql-Mt-Oks"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

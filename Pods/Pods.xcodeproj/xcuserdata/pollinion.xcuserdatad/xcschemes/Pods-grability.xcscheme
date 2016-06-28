@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "65FA5F2D28B5B15E548A5300B791F6C5"
+               BlueprintIdentifier = "335AFFC086A16574B11D85083571D8AB"
                BuildableName = "Pods_grability.framework"
                BlueprintName = "Pods-grability"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "65FA5F2D28B5B15E548A5300B791F6C5"
+            BlueprintIdentifier = "335AFFC086A16574B11D85083571D8AB"
             BuildableName = "Pods_grability.framework"
             BlueprintName = "Pods-grability"
             ReferencedContainer = "container:Pods.xcodeproj">

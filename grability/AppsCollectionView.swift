@@ -35,7 +35,9 @@ class AppsCollectionView: UICollectionViewController, GetDataFromCategories {
     }
     
     override func viewWillAppear(animated: Bool) {
+        refresher.beginRefreshing()
         collectionView?.reloadData()
+        self.stopRefresher() 
     }
 
     override func viewDidLoad() {
@@ -99,17 +101,20 @@ class AppsCollectionView: UICollectionViewController, GetDataFromCategories {
         refresher.addTarget(self, action: #selector(loadData), forControlEvents: .ValueChanged)
         collectionView!.addSubview(refresher)
     }
-    func getTypeDevice(){
-        if (UIDevice.currentDevice().userInterfaceIdiom == .Pad) {
-            self.viewType = "Grid"
-        }
-    }
+    
+
     
     func loadData()
     {
         //code to execute during refresher
         self.getDataJSON(page: numberRequest, numberOfElements: 20)
-        stopRefresher()         //Call this to stop refresher
+        self.stopRefresher()         //Call this to stop refresher
+    }
+    
+    func getTypeDevice(){
+        if (UIDevice.currentDevice().userInterfaceIdiom == .Pad) {
+            self.viewType = "Grid"
+        }
     }
     
     func stopRefresher()
