@@ -42,7 +42,6 @@ class detailViewController: UIViewController {
      This function create programmatical object CardView.
      */
     private func prepareLargeCardViewExample() {
-        
         let cardView: MaterialPulseView = MaterialPulseView(frame: CGRectMake(10, 100, view.bounds.width - 32, view.bounds.height - 140))
         cardView.pulseColor = MaterialColor.blueGrey.base
         cardView.depth = .Depth1
@@ -84,7 +83,6 @@ class detailViewController: UIViewController {
         
         contentView.grid.rows = 4
         contentView.grid.offset.rows = 2
-        
         cardView.grid.axis.direction = .None
         cardView.grid.spacing = 2
         cardView.grid.views = [
@@ -93,18 +91,14 @@ class detailViewController: UIViewController {
         
         titleLabel.grid.rows = 5
         titleLabel.grid.columns = 8
-        
         moreButton.grid.rows = 3
         moreButton.grid.columns = 2
         moreButton.grid.offset.columns = 10
-        
         detailLabel.grid.rows = 25
         detailLabel.grid.offset.rows = 5
-        
         rightsLabel.grid.rows = 3
         rightsLabel.grid.columns = 8
         rightsLabel.grid.offset.rows = 30
-        
         contentView.grid.spacing = 8
         contentView.grid.axis.direction = .None
         contentView.grid.contentInsetPreset = .Square3

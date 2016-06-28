@@ -6,25 +6,25 @@ provides-nominal:
 provides-member:
 - ["C9grability20detailViewController", ""]
 provides-dynamic-lookup:
-- "detailApp"
 - "object"
 - "viewDidLoad"
+- "detailApp"
 depends-top-level:
-- !private "MaterialPulseView"
-- !private "UIScreen"
 - "App"
 - !private "MaterialColor"
-- !private "MaterialView"
-- !private "Float"
-- !private "UILabel"
-- !private "RobotoFont"
-- "detailViewController"
-- "ProgrammaticallyObject"
-- "UIViewController"
 - !private "IconButton"
-- !private "StringLiteralType"
-- !private "/"
+- !private "MaterialView"
 - !private "-"
+- "detailViewController"
+- !private "Float"
+- !private "StringLiteralType"
+- !private "RobotoFont"
+- "ProgrammaticallyObject"
+- !private "MaterialPulseView"
+- "UIViewController"
+- !private "UILabel"
+- !private "/"
+- !private "UIScreen"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "Float"]

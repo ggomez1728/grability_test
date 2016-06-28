@@ -195,7 +195,9 @@ class AppsCollectionView: UICollectionViewController, GetDataFromCategories {
         return cell
     }
     
-    
+    /**
+     This function create collection in mode Grid or List.
+     */
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         if (self.viewType == "List") {
             return CGSize(width: CGRectGetWidth(collectionView.frame), height: 120)
@@ -211,6 +213,9 @@ class AppsCollectionView: UICollectionViewController, GetDataFromCategories {
         
     }
     
+    /**
+        This function call the CategoriesViewController for the selection of categories.
+    */
     @IBAction func getCategory(sender: AnyObject) {
         let persistence = DataPersistence(context: self.context)
         let nextViewController = self.storyboard?.instantiateViewControllerWithIdentifier("CategoriesViewController") as? CategoriesViewController
