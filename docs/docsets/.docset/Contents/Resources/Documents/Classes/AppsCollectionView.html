@@ -14,7 +14,7 @@
     <a title="AppsCollectionView Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (31% documented)</p>
+        <p><a href="../index.html"> Docs</a> (77% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -58,9 +58,6 @@
                 <a href="../Classes/ProgrammaticallyObject.html">ProgrammaticallyObject</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ViewController.html">ViewController</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/detailViewController.html">detailViewController</a>
               </li>
             </ul>
@@ -79,7 +76,13 @@
         <section>
           <section class="section">
             <h1>AppsCollectionView</h1>
-            <p>Undocumented</p>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">class</span> <span class="kt">AppsCollectionView</span><span class="p">:</span> <span class="kt">UICollectionViewController</span><span class="p">,</span> <span class="kt"><a href="../Protocols/GetDataFromCategories.html">GetDataFromCategories</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>This class is a Controller for the view that represent the collections of Apps.</p>
 
           </section>
           <section class="section task-group-section">
@@ -98,8 +101,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The viewType define the type of view between <q>List</q> or <q>Grid</q>.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">viewType</span><span class="p">:</span><span class="kt">String</span> <span class="o">=</span> <span class="s">"List"</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -117,27 +128,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This context allow data between views.</p>
 
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC9grability18AppsCollectionView14refreshControlGSQCSo16UIRefreshControl_"></a>
-                    <a name="//apple_ref/swift/Property/refreshControl" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC9grability18AppsCollectionView14refreshControlGSQCSo16UIRefreshControl_">refreshControl</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">context</span> <span class="p">:</span><span class="kt">NSManagedObjectContext</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span></code></pre>
 
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -155,27 +155,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>It&rsquo;s array of Apps for use in the collection.</p>
 
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC9grability18AppsCollectionView8indexAppSi"></a>
-                    <a name="//apple_ref/swift/Property/indexApp" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC9grability18AppsCollectionView8indexAppSi">indexApp</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">apps</span><span class="p">:[</span><span class="kt"><a href="../Classes/App.html">App</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></code></pre>
 
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -193,8 +182,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>It&rsquo;s a control for refresh data when pull.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">refresher</span> <span class="o">=</span> <span class="kt">UIRefreshControl</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -212,8 +209,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Represent number of pulls to refresh, this is for pagination in request of Json data.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">numberRequest</span><span class="p">:</span><span class="kt">Int</span><span class="o">=</span><span class="mi">1</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -231,8 +236,36 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This function give all Apps of a category id saved in Core Data.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getDataFromCategories</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>It&rsquo;s a id of Category selected for sort data.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -250,8 +283,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This function rewrite viewWillAppear() for config data to show when select a category</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -269,8 +310,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This function rewrite viewDidLoad() for init this View</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -288,8 +337,49 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This function Show data of request  and save in Core Data.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getDataJSON</span><span class="p">(</span><span class="n">page</span> <span class="nv">page</span><span class="p">:</span><span class="kt">Int</span><span class="p">,</span> <span class="nv">numberOfElements</span><span class="p">:</span><span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>page</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>It&rsquo;s a number of page in the pagination.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>numberOfElements</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>It&rsquo;s a number of elements (Apps) on each request.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -307,8 +397,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This function do a basic configuration for layout.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">configLayout</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -326,8 +424,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This function config the pull to refresh action.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">configRefresh</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -345,8 +451,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This function is where the data is load.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">loadData</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -364,8 +478,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This function determines if the device is iPad or iPhone</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getTypeDevice</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -383,27 +505,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>This function stop animation to refresher.</p>
 
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC9grability18AppsCollectionView23didReceiveMemoryWarningFT_T_"></a>
-                    <a name="//apple_ref/swift/Method/didReceiveMemoryWarning()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9grability18AppsCollectionView23didReceiveMemoryWarningFT_T_">didReceiveMemoryWarning()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopRefresher</span><span class="p">()</span></code></pre>
 
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -435,6 +546,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">AppsCollectionView</span><span class="p">:</span> <span class="kt">UICollectionViewController</span><span class="p">,</span> <span class="kt"><a href="../Protocols/GetDataFromCategories.html">GetDataFromCategories</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -453,6 +572,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">AppsCollectionView</span><span class="p">:</span> <span class="kt">UICollectionViewController</span><span class="p">,</span> <span class="kt"><a href="../Protocols/GetDataFromCategories.html">GetDataFromCategories</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -473,6 +600,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">AppsCollectionView</span><span class="p">:</span> <span class="kt">UICollectionViewController</span><span class="p">,</span> <span class="kt"><a href="../Protocols/GetDataFromCategories.html">GetDataFromCategories</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -491,6 +626,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">AppsCollectionView</span><span class="p">:</span> <span class="kt">UICollectionViewController</span><span class="p">,</span> <span class="kt"><a href="../Protocols/GetDataFromCategories.html">GetDataFromCategories</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -511,6 +654,14 @@
                         <p>Undocumented</p>
 
                       </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">AppsCollectionView</span><span class="p">:</span> <span class="kt">UICollectionViewController</span><span class="p">,</span> <span class="kt"><a href="../Protocols/GetDataFromCategories.html">GetDataFromCategories</a></span></code></pre>
+
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -529,6 +680,14 @@
                       <div class="abstract">
                         <p>Undocumented</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">AppsCollectionView</span><span class="p">:</span> <span class="kt">UICollectionViewController</span><span class="p">,</span> <span class="kt"><a href="../Protocols/GetDataFromCategories.html">GetDataFromCategories</a></span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>

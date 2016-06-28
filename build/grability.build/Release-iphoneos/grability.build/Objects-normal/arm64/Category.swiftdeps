@@ -6,14 +6,14 @@ provides-nominal:
 provides-member:
 - ["C9grability8Category", ""]
 provides-dynamic-lookup:
-- "id"
 - "term"
+- "id"
 depends-top-level:
-- "Int"
-- "String"
-- "Category"
-- !private "StringLiteralType"
 - "NSObject"
+- "Category"
+- "String"
+- "Int"
+- !private "StringLiteralType"
 depends-member:
 - ["Ps9AnyObject", "id"]
 - ["Ps9AnyObject", "init"]

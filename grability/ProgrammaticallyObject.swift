@@ -7,8 +7,9 @@
 //
 
 import UIKit
+
 /**
- alternative Class for create funny images
+ This is a alternative Class for create funny images.
 */
  class ProgrammaticallyObject: NSObject {
     
@@ -23,7 +24,6 @@ import UIKit
     /// - Parameter height: It's a height of label.
     
     ///  - Returns: UILabel return a funny label.
-    
     func createLabel(text text:String, x:Float, y:Float, width:Float, height:Float, font:String, size:Float ) -> UILabel {
         let label = UILabel(frame: CGRectMake(CGFloat(x), CGFloat(y),CGFloat(width), CGFloat(height)))
         label.textAlignment = NSTextAlignment.Center
@@ -45,7 +45,6 @@ import UIKit
     /// - Parameter height: It's a height of image.
 
     ///  - Returns: UIImageView return a funny image .
-    
     func createImage(image image:UIImage, x:Float, y:Float, width:Float, height:Float) -> UIImageView {
         let picture = UIImageView(frame: CGRectMake(CGFloat(x), CGFloat(y),CGFloat(width), CGFloat(height))) // set as you want
         picture.image = image
@@ -55,5 +54,4 @@ import UIKit
         picture.layer.borderColor = UIColor.whiteColor().CGColor
         return picture
     }
-
 }

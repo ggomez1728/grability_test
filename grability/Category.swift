@@ -13,19 +13,18 @@ import UIKit
 */
 class Category: NSObject {
 
-    /// This is a identifier of Category
+    /// This is a identifier of Category.
     var id: Int
     
-    /// This is a name of  each Category
+    /// This is a name of  each Category.
     var term: String
     
     /**
-    It allows to build an object of this class
+    It allows to build an object of this class.
     */
-    /// - Parameters : Represent elements
+    /// - Parameters : Represent elements.
     /// - Parameter id:  A identifier of Category.
     /// - Parameter term:  Name of Category.
-
     init(id:Int, term:String) {
         self.id = id
         self.term = term

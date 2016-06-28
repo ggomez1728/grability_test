@@ -14,13 +14,13 @@ import CoreData
  */
 class DataPersistence: NSObject {
     
-    /// Represent the context for manage Core Data of application
+    /// Represent the context for manage Core Data of application.
     var context:NSManagedObjectContext?
     
     /**
      This is a constructor of class.
      */
-    /// - Parameters : Represent elements
+    /// - Parameters : Represent elements.
     /// - Parameter context:  Receive the context of Application.
     init(context:NSManagedObjectContext?){
         self.context = context
@@ -29,8 +29,8 @@ class DataPersistence: NSObject {
     /**
      This function allows save data persistence.
      */
-    /// - Parameters : Represent elements
-    /// - Parameter apps: It's a array of type App to will save
+    /// - Parameters : Represent elements.
+    /// - Parameter apps: It's a array of type App to will save.
     func saveApps(apps:[App]){
         for app in apps{
             if (!self.testCategoryExists(app.category.id)){
@@ -52,7 +52,6 @@ class DataPersistence: NSObject {
         var categories:[Category] = []
         categories.append(Category(id: 0, term: "All"))
         let AppEntity = NSEntityDescription.entityForName("Category", inManagedObjectContext: self.context!)
-
         let requestApp = AppEntity?.managedObjectModel.fetchRequestTemplateForName("reqCategories")
         do{
             let categoriesEntity = try self.context?.executeFetchRequest(requestApp!)
@@ -66,7 +65,6 @@ class DataPersistence: NSObject {
         catch{
             print("Fail reading coreData <<getCategories>>")
         }
-        
         return categories
     }
     
@@ -104,8 +102,8 @@ class DataPersistence: NSObject {
     /**
      This function give it Apps of category selected and saved in Core Data.
      */
-    /// - Parameters : Represent elements
-    /// - Parameter idCategory: It's a id of Category selected for sort data
+    /// - Parameters : Represent elements.
+    /// - Parameter idCategory: It's a id of Category selected for sort data.
     
     ///  - Returns: An Array of Apps.
     func getAppsForCategory(id_category id_category:Int) -> [App] {
@@ -142,8 +140,8 @@ class DataPersistence: NSObject {
     /**
      This function check if the category did has saved in Core Data.
      */
-    /// - Parameters : Represent elements
-    /// - Parameter id: It's a id of Category selected to find
+    /// - Parameters : Represent elements.
+    /// - Parameter id: It's a id of Category selected to find.
     
     ///  - Returns: Boolean response.
     private func testCategoryExists(id: Int)->Bool{
@@ -165,8 +163,8 @@ class DataPersistence: NSObject {
     /**
      This function check if the App did has saved in Core Data.
      */
-    /// - Parameters : Represent elements
-    /// - Parameter id: It's a id of App selected to find
+    /// - Parameters : Represent elements.
+    /// - Parameter id: It's a id of App selected to find.
     
     ///  - Returns: Boolean response.
     private func testAppExists(id:Int)->Bool{
@@ -188,10 +186,9 @@ class DataPersistence: NSObject {
     /**
      This function save the category in Core Data.
      */
-    /// - Parameters : Represent elements
-    /// - Parameter app: It's a App with datas of category to save
+    /// - Parameters : Represent elements.
+    /// - Parameter app: It's a App with datas of category to save.
     private func saveCategory(app:App){
-        
         let newCategoryEntity = NSEntityDescription.insertNewObjectForEntityForName("Category", inManagedObjectContext: self.context!)
         //save elements of new route
         newCategoryEntity.setValue(app.category.id, forKey: "id")
@@ -207,8 +204,8 @@ class DataPersistence: NSObject {
     /**
      This function save the app in Core Data.
      */
-    /// - Parameters : Represent elements
-    /// - Parameter app: It's a App to save
+    /// - Parameters : Represent elements.
+    /// - Parameter app: It's a App to save.
     private func saveApp(app:App){
         let categoryEntity = NSEntityDescription.entityForName("Category", inManagedObjectContext: self.context!)
         let requestCategory = categoryEntity?.managedObjectModel.fetchRequestFromTemplateWithName("reqCategory", substitutionVariables: ["id":app.category.id])
@@ -225,8 +222,8 @@ class DataPersistence: NSObject {
     /**
      This function save the app entity for Core Data.
      */
-    /// - Parameters : Represent elements
-    /// - Parameter app: It's a App with datas to save
+    /// - Parameters : Represent elements.
+    /// - Parameter app: It's a App with datas to save.
     ///  - Returns: NSObject response for relationship hasMany.
 
     private func saveAppEntity(app:App)->NSObject{

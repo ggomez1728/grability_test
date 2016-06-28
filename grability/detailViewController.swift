@@ -10,44 +10,43 @@ import UIKit
 import Material
 
 
-
+/**
+    This class is a Controller for the view that represent the collections of Apps.
+ */
 class detailViewController: UIViewController {
-
-    var test2:String=""
+   
+    ///Represent de App for view Detail.
     var detailApp:App? = nil
-    let object=ProgrammaticallyObject()
-
     
+    ///This object is used in the image funny
+    let object = ProgrammaticallyObject()
+
+    /**
+     This function rewrite viewDidLoad() for init this View
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let widthView = Float(UIScreen.mainScreen().bounds.width)
         let heightView = Float(UIScreen.mainScreen().bounds.height - 20)
-
-    
         prepareLargeCardViewExample()
         let imageApp =  object.createImage(image: detailApp!.image!, x: (widthView/2)-50, y: 110, width: 100, height: 100 )
         self.view.addSubview(imageApp);
-        
         let rightsApp = object.createLabel(text: "Grability Test", x: 10, y: heightView-33, width: widthView-20, height: 63, font: "HelveticaNeue", size: 14)
         self.view.addSubview(rightsApp)
         
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    /**
+     This function create programmatical object CardView.
+     */
     private func prepareLargeCardViewExample() {
-        var image: UIImage? = UIImage(named: "CosmicMindInverted")
         
         let cardView: MaterialPulseView = MaterialPulseView(frame: CGRectMake(10, 100, view.bounds.width - 32, view.bounds.height - 140))
         cardView.pulseColor = MaterialColor.blueGrey.base
         cardView.depth = .Depth1
         view.addSubview(cardView)
-        
         
         let contentView: MaterialView = MaterialView()
         contentView.backgroundColor = MaterialColor.clear
@@ -61,13 +60,10 @@ class detailViewController: UIViewController {
         titleLabel.backgroundColor = MaterialColor.clear
         contentView.addSubview(titleLabel)
         
-        image = MaterialIcon.cm.moreHorizontal
         let moreButton: IconButton = IconButton()
         moreButton.contentEdgeInsetsPreset = .None
         moreButton.pulseColor = MaterialColor.blueGrey.darken4
         moreButton.tintColor = MaterialColor.blueGrey.darken4
-        moreButton.setImage(image, forState: .Normal)
-        moreButton.setImage(image, forState: .Highlighted)
         contentView.addSubview(moreButton)
         
         let detailLabel: UILabel = UILabel()
@@ -85,8 +81,6 @@ class detailViewController: UIViewController {
         rightsLabel.textColor = MaterialColor.blueGrey.darken4
         rightsLabel.backgroundColor = MaterialColor.clear
         contentView.addSubview(rightsLabel)
-        
-        
         
         contentView.grid.rows = 4
         contentView.grid.offset.rows = 2

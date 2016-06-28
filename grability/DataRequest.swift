@@ -9,23 +9,21 @@
 import UIKit
 
 /**
- This class representing the Json-Drive for conect to Restfull Service.
- */
+    This class representing the Json-Drive for conect to Restfull Service.
+*/
 class DataRequest: NSObject {
     
     /**
       This function get data with the url.
     */
-    /// - Parameters : Represent elements 
+    /// - Parameters : Represent elements.
     /// - Parameter xImage:  Repesent the size of image. (1X = 1, 2X = 2, 3X= 3).
     /// - Parameter urlString:  It's a url for the connect to server.
     /// - Parameter numberOfElements:  This represent the number of elements to get of server.
     /// - Parameter numberOfPage:  This represent the pagination to get of server.
 
     ///  - Returns: An couple with Array of Apps and type of respose.
-    
     func getData(x_image x_image:Int, url_string: String, numberOfElements:Int, numberOfPage:Int )->(apps: [App], response: String){
-
         var apps:[App]=[]
         let url = NSURL(string:"\(url_string)/limit=\(numberOfElements)/json?page=\(numberOfPage)")
         let data_json = NSData(contentsOfURL: url!)
@@ -42,33 +40,32 @@ class DataRequest: NSObject {
                         let entries = dic_feed["entry"] as! NSArray
                         if (entries.count > 0) {
                             for element in entries {
-                                //load id
+                                //load id.
                                 let dic_id = element["id"] as! NSDictionary
                                 let dic_attributes = dic_id["attributes"] as! NSDictionary
                                 let element_id = dic_attributes["im:id"] as! NSString as String
-                                //load title
+                                //load title.
                                 let dic_title = element["title"] as! NSDictionary
                                 let element_title = dic_title["label"] as! NSString as String
-                                //load summary
+                                //load summary.
                                 let dic_summary = element["summary"] as! NSDictionary
                                 let element_summary = dic_summary["label"] as! NSString as String
-                                //load rights
+                                //load rights.
                                 let dic_rights = element["rights"] as! NSDictionary
                                 let element_rights = dic_rights["label"] as! NSString as String
-                                
-                                //load categories
+                                //load categories.
                                 let dic_category = element["category"] as! NSDictionary
                                 let dic_cat_attributes = dic_category["attributes"] as! NSDictionary
                                 let element_id_category = dic_cat_attributes["im:id"] as! NSString as String
                                 let element_category = dic_cat_attributes["label"] as! NSString as String
-                                //load image
+                                //load image.
                                 let images = element["im:image"] as! NSArray
                                 var url_image:String = ""
                                 if (images.count > 0){
                                     let dic_image = images[x_image-1] as! NSDictionary
                                     url_image =  dic_image["label"] as! NSString as String
                                 }
-                                //load app in array
+                                //load app in array.
                                 apps.append(App(id: Int(element_id)!, title: element_title, summary: element_summary, id_category: Int(element_id_category)!, term: element_category, rights: element_rights, url_image: url_image))
                             }
                         }
@@ -79,7 +76,7 @@ class DataRequest: NSObject {
                 }
             }
             catch{
-             print("fail in reading Json")
+                print("fail in reading Json")
             }
         }
         return (apps, "ok")
@@ -88,8 +85,8 @@ class DataRequest: NSObject {
     
     /**
      This function get image with the url.
-     */
-    /// - Parameters : Represent elements
+    */
+    /// - Parameters : Represent elements.
     /// - Parameter urlImage:  It's a url for get image.
     
     ///  - Returns: An image of type UIImage.

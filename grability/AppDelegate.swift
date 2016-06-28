@@ -10,6 +10,10 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
+
+/**
+ This class represen actions of Dellegates in the applications.
+ */
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?

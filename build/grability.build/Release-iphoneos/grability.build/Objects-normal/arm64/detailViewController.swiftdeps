@@ -6,38 +6,31 @@ provides-nominal:
 provides-member:
 - ["C9grability20detailViewController", ""]
 provides-dynamic-lookup:
-- "object"
-- "test2"
-- "viewDidLoad"
 - "detailApp"
-- "didReceiveMemoryWarning"
+- "object"
+- "viewDidLoad"
 depends-top-level:
-- "detailViewController"
-- !private "MaterialIcon"
-- "String"
-- !private "Float"
-- !private "UIImage"
-- "ProgrammaticallyObject"
+- !private "MaterialPulseView"
+- !private "UIScreen"
+- "App"
 - !private "MaterialColor"
 - !private "MaterialView"
-- !private "IconButton"
-- !private "UIScreen"
-- !private "-"
-- "StringLiteralType"
-- !private "/"
-- "App"
-- !private "MaterialPulseView"
-- !private "RobotoFont"
-- "UIViewController"
+- !private "Float"
 - !private "UILabel"
+- !private "RobotoFont"
+- "detailViewController"
+- "ProgrammaticallyObject"
+- "UIViewController"
+- !private "IconButton"
+- !private "StringLiteralType"
+- !private "/"
+- !private "-"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "Float"]
 - !private ["Ps9AnyObject", "MaterialColor"]
-- !private ["Ps9AnyObject", "MaterialIcon"]
 - ["Ps9AnyObject", "ProgrammaticallyObject"]
 - !private ["Ps9AnyObject", "RobotoFont"]
-- !private ["Ps9AnyObject", "UIImage"]
 - !private ["Ps9AnyObject", "UILabel"]
 - !private ["Ps9AnyObject", "UIScreen"]
 - !private ["Ps9AnyObject", "addSubview"]
@@ -46,7 +39,6 @@ depends-member:
 - !private ["Ps9AnyObject", "createImage"]
 - !private ["Ps9AnyObject", "createLabel"]
 - ["Ps9AnyObject", "detailApp"]
-- ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - !private ["Ps9AnyObject", "font"]
 - !private ["Ps9AnyObject", "grid"]
 - !private ["Ps9AnyObject", "image"]
@@ -58,7 +50,6 @@ depends-member:
 - ["Ps9AnyObject", "prepareLargeCardViewExample"]
 - !private ["Ps9AnyObject", "rights"]
 - !private ["Ps9AnyObject", "summary"]
-- ["Ps9AnyObject", "test2"]
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "textColor"]
 - !private ["Ps9AnyObject", "title"]
@@ -74,10 +65,8 @@ depends-member:
 - !private ["VSC6CGRect", "width"]
 - !private ["Ps11CVarArgType", "Float"]
 - !private ["Ps11CVarArgType", "MaterialColor"]
-- !private ["Ps11CVarArgType", "MaterialIcon"]
 - ["Ps11CVarArgType", "ProgrammaticallyObject"]
 - !private ["Ps11CVarArgType", "RobotoFont"]
-- !private ["Ps11CVarArgType", "UIImage"]
 - !private ["Ps11CVarArgType", "UILabel"]
 - !private ["Ps11CVarArgType", "UIScreen"]
 - !private ["Ps11CVarArgType", "addSubview"]
@@ -86,7 +75,6 @@ depends-member:
 - !private ["Ps11CVarArgType", "createImage"]
 - !private ["Ps11CVarArgType", "createLabel"]
 - ["Ps11CVarArgType", "detailApp"]
-- ["Ps11CVarArgType", "didReceiveMemoryWarning"]
 - !private ["Ps11CVarArgType", "font"]
 - !private ["Ps11CVarArgType", "grid"]
 - !private ["Ps11CVarArgType", "image"]
@@ -98,7 +86,6 @@ depends-member:
 - ["Ps11CVarArgType", "prepareLargeCardViewExample"]
 - !private ["Ps11CVarArgType", "rights"]
 - !private ["Ps11CVarArgType", "summary"]
-- ["Ps11CVarArgType", "test2"]
 - !private ["Ps11CVarArgType", "text"]
 - !private ["Ps11CVarArgType", "textColor"]
 - !private ["Ps11CVarArgType", "title"]
@@ -108,10 +95,8 @@ depends-member:
 - !private ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "Float"]
 - !private ["Ps28CustomDebugStringConvertible", "MaterialColor"]
-- !private ["Ps28CustomDebugStringConvertible", "MaterialIcon"]
 - ["Ps28CustomDebugStringConvertible", "ProgrammaticallyObject"]
 - !private ["Ps28CustomDebugStringConvertible", "RobotoFont"]
-- !private ["Ps28CustomDebugStringConvertible", "UIImage"]
 - !private ["Ps28CustomDebugStringConvertible", "UILabel"]
 - !private ["Ps28CustomDebugStringConvertible", "UIScreen"]
 - !private ["Ps28CustomDebugStringConvertible", "addSubview"]
@@ -120,7 +105,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "createImage"]
 - !private ["Ps28CustomDebugStringConvertible", "createLabel"]
 - ["Ps28CustomDebugStringConvertible", "detailApp"]
-- ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps28CustomDebugStringConvertible", "font"]
 - !private ["Ps28CustomDebugStringConvertible", "grid"]
 - !private ["Ps28CustomDebugStringConvertible", "image"]
@@ -132,7 +116,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "prepareLargeCardViewExample"]
 - !private ["Ps28CustomDebugStringConvertible", "rights"]
 - !private ["Ps28CustomDebugStringConvertible", "summary"]
-- ["Ps28CustomDebugStringConvertible", "test2"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps28CustomDebugStringConvertible", "textColor"]
 - !private ["Ps28CustomDebugStringConvertible", "title"]
@@ -141,10 +124,8 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "Float"]
 - !private ["Ps23CustomStringConvertible", "MaterialColor"]
-- !private ["Ps23CustomStringConvertible", "MaterialIcon"]
 - ["Ps23CustomStringConvertible", "ProgrammaticallyObject"]
 - !private ["Ps23CustomStringConvertible", "RobotoFont"]
-- !private ["Ps23CustomStringConvertible", "UIImage"]
 - !private ["Ps23CustomStringConvertible", "UILabel"]
 - !private ["Ps23CustomStringConvertible", "UIScreen"]
 - !private ["Ps23CustomStringConvertible", "addSubview"]
@@ -153,7 +134,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "createImage"]
 - !private ["Ps23CustomStringConvertible", "createLabel"]
 - ["Ps23CustomStringConvertible", "detailApp"]
-- ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps23CustomStringConvertible", "font"]
 - !private ["Ps23CustomStringConvertible", "grid"]
 - !private ["Ps23CustomStringConvertible", "image"]
@@ -165,7 +145,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "prepareLargeCardViewExample"]
 - !private ["Ps23CustomStringConvertible", "rights"]
 - !private ["Ps23CustomStringConvertible", "summary"]
-- ["Ps23CustomStringConvertible", "test2"]
 - !private ["Ps23CustomStringConvertible", "text"]
 - !private ["Ps23CustomStringConvertible", "textColor"]
 - !private ["Ps23CustomStringConvertible", "title"]
@@ -175,10 +154,8 @@ depends-member:
 - !private ["Ps9Equatable", "ByTruncatingTail"]
 - !private ["Ps9Equatable", "Float"]
 - !private ["Ps9Equatable", "MaterialColor"]
-- !private ["Ps9Equatable", "MaterialIcon"]
 - ["Ps9Equatable", "ProgrammaticallyObject"]
 - !private ["Ps9Equatable", "RobotoFont"]
-- !private ["Ps9Equatable", "UIImage"]
 - !private ["Ps9Equatable", "UILabel"]
 - !private ["Ps9Equatable", "UIScreen"]
 - !private ["Ps9Equatable", "addSubview"]
@@ -187,7 +164,6 @@ depends-member:
 - !private ["Ps9Equatable", "createImage"]
 - !private ["Ps9Equatable", "createLabel"]
 - ["Ps9Equatable", "detailApp"]
-- ["Ps9Equatable", "didReceiveMemoryWarning"]
 - !private ["Ps9Equatable", "font"]
 - !private ["Ps9Equatable", "grid"]
 - !private ["Ps9Equatable", "height"]
@@ -200,7 +176,6 @@ depends-member:
 - ["Ps9Equatable", "prepareLargeCardViewExample"]
 - !private ["Ps9Equatable", "rights"]
 - !private ["Ps9Equatable", "summary"]
-- ["Ps9Equatable", "test2"]
 - !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "textColor"]
 - !private ["Ps9Equatable", "title"]
@@ -214,10 +189,8 @@ depends-member:
 - !private ["Ps8Hashable", "ByTruncatingTail"]
 - !private ["Ps8Hashable", "Float"]
 - !private ["Ps8Hashable", "MaterialColor"]
-- !private ["Ps8Hashable", "MaterialIcon"]
 - ["Ps8Hashable", "ProgrammaticallyObject"]
 - !private ["Ps8Hashable", "RobotoFont"]
-- !private ["Ps8Hashable", "UIImage"]
 - !private ["Ps8Hashable", "UILabel"]
 - !private ["Ps8Hashable", "UIScreen"]
 - !private ["Ps8Hashable", "addSubview"]
@@ -226,7 +199,6 @@ depends-member:
 - !private ["Ps8Hashable", "createImage"]
 - !private ["Ps8Hashable", "createLabel"]
 - ["Ps8Hashable", "detailApp"]
-- ["Ps8Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps8Hashable", "font"]
 - !private ["Ps8Hashable", "grid"]
 - !private ["Ps8Hashable", "image"]
@@ -238,7 +210,6 @@ depends-member:
 - ["Ps8Hashable", "prepareLargeCardViewExample"]
 - !private ["Ps8Hashable", "rights"]
 - !private ["Ps8Hashable", "summary"]
-- ["Ps8Hashable", "test2"]
 - !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "textColor"]
 - !private ["Ps8Hashable", "title"]
@@ -248,16 +219,13 @@ depends-member:
 - !private ["Ps25IntegerLiteralConvertible", "init"]
 - !private ["PSo8NSCoding", "Float"]
 - !private ["PSo8NSCoding", "MaterialColor"]
-- !private ["PSo8NSCoding", "MaterialIcon"]
 - ["PSo8NSCoding", "ProgrammaticallyObject"]
 - !private ["PSo8NSCoding", "RobotoFont"]
-- !private ["PSo8NSCoding", "UIImage"]
 - !private ["PSo8NSCoding", "UILabel"]
 - !private ["PSo8NSCoding", "UIScreen"]
 - !private ["PSo8NSCoding", "addSubview"]
 - !private ["PSo8NSCoding", "backgroundColor"]
 - ["PSo8NSCoding", "detailApp"]
-- ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "font"]
 - !private ["PSo8NSCoding", "grid"]
 - ["PSo8NSCoding", "init"]
@@ -265,7 +233,6 @@ depends-member:
 - !private ["PSo8NSCoding", "numberOfLines"]
 - ["PSo8NSCoding", "object"]
 - ["PSo8NSCoding", "prepareLargeCardViewExample"]
-- ["PSo8NSCoding", "test2"]
 - !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "textColor"]
 - !private ["PSo8NSCoding", "view"]
@@ -273,18 +240,14 @@ depends-member:
 - ["PSo8NSCoding", ""]
 - !private ["PSo26NSExtensionRequestHandling", "Float"]
 - !private ["PSo26NSExtensionRequestHandling", "MaterialColor"]
-- !private ["PSo26NSExtensionRequestHandling", "MaterialIcon"]
 - ["PSo26NSExtensionRequestHandling", "ProgrammaticallyObject"]
 - !private ["PSo26NSExtensionRequestHandling", "RobotoFont"]
-- !private ["PSo26NSExtensionRequestHandling", "UIImage"]
 - !private ["PSo26NSExtensionRequestHandling", "UILabel"]
 - !private ["PSo26NSExtensionRequestHandling", "UIScreen"]
 - ["PSo26NSExtensionRequestHandling", "detailApp"]
-- ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "object"]
 - ["PSo26NSExtensionRequestHandling", "prepareLargeCardViewExample"]
-- ["PSo26NSExtensionRequestHandling", "test2"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
@@ -293,13 +256,10 @@ depends-member:
 - !private ["CSo8NSObject", "Float"]
 - !private ["CSo8NSObject", "IconButton"]
 - !private ["CSo8NSObject", "MaterialColor"]
-- !private ["CSo8NSObject", "MaterialIcon"]
 - !private ["CSo8NSObject", "MaterialPulseView"]
 - !private ["CSo8NSObject", "MaterialView"]
 - ["CSo8NSObject", "ProgrammaticallyObject"]
 - !private ["CSo8NSObject", "RobotoFont"]
-- ["CSo8NSObject", "String"]
-- !private ["CSo8NSObject", "UIImage"]
 - !private ["CSo8NSObject", "UILabel"]
 - !private ["CSo8NSObject", "UIScreen"]
 - !private ["CSo8NSObject", "addSubview"]
@@ -308,7 +268,6 @@ depends-member:
 - !private ["CSo8NSObject", "createImage"]
 - !private ["CSo8NSObject", "createLabel"]
 - ["CSo8NSObject", "detailApp"]
-- ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "font"]
 - !private ["CSo8NSObject", "grid"]
 - !private ["CSo8NSObject", "image"]
@@ -320,7 +279,6 @@ depends-member:
 - ["CSo8NSObject", "prepareLargeCardViewExample"]
 - !private ["CSo8NSObject", "rights"]
 - !private ["CSo8NSObject", "summary"]
-- ["CSo8NSObject", "test2"]
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textColor"]
 - !private ["CSo8NSObject", "title"]
@@ -328,10 +286,8 @@ depends-member:
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["PSo16NSObjectProtocol", "Float"]
 - !private ["PSo16NSObjectProtocol", "MaterialColor"]
-- !private ["PSo16NSObjectProtocol", "MaterialIcon"]
 - ["PSo16NSObjectProtocol", "ProgrammaticallyObject"]
 - !private ["PSo16NSObjectProtocol", "RobotoFont"]
-- !private ["PSo16NSObjectProtocol", "UIImage"]
 - !private ["PSo16NSObjectProtocol", "UILabel"]
 - !private ["PSo16NSObjectProtocol", "UIScreen"]
 - !private ["PSo16NSObjectProtocol", "addSubview"]
@@ -340,7 +296,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "createImage"]
 - !private ["PSo16NSObjectProtocol", "createLabel"]
 - ["PSo16NSObjectProtocol", "detailApp"]
-- ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "font"]
 - !private ["PSo16NSObjectProtocol", "grid"]
 - !private ["PSo16NSObjectProtocol", "image"]
@@ -352,14 +307,12 @@ depends-member:
 - ["PSo16NSObjectProtocol", "prepareLargeCardViewExample"]
 - !private ["PSo16NSObjectProtocol", "rights"]
 - !private ["PSo16NSObjectProtocol", "summary"]
-- ["PSo16NSObjectProtocol", "test2"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "textColor"]
 - !private ["PSo16NSObjectProtocol", "title"]
 - !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["PSo14NSSecureCoding", "init"]
 - !private ["C9grability22ProgrammaticallyObject", "createImage"]
 - !private ["C9grability22ProgrammaticallyObject", "createLabel"]
 - ["C9grability22ProgrammaticallyObject", "init"]
@@ -386,16 +339,13 @@ depends-member:
 - !private ["PSo12UIAppearance", "textColor"]
 - !private ["PSo21UIAppearanceContainer", "Float"]
 - !private ["PSo21UIAppearanceContainer", "MaterialColor"]
-- !private ["PSo21UIAppearanceContainer", "MaterialIcon"]
 - ["PSo21UIAppearanceContainer", "ProgrammaticallyObject"]
 - !private ["PSo21UIAppearanceContainer", "RobotoFont"]
-- !private ["PSo21UIAppearanceContainer", "UIImage"]
 - !private ["PSo21UIAppearanceContainer", "UILabel"]
 - !private ["PSo21UIAppearanceContainer", "UIScreen"]
 - !private ["PSo21UIAppearanceContainer", "addSubview"]
 - !private ["PSo21UIAppearanceContainer", "backgroundColor"]
 - ["PSo21UIAppearanceContainer", "detailApp"]
-- ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - !private ["PSo21UIAppearanceContainer", "font"]
 - !private ["PSo21UIAppearanceContainer", "grid"]
 - ["PSo21UIAppearanceContainer", "init"]
@@ -403,7 +353,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "numberOfLines"]
 - ["PSo21UIAppearanceContainer", "object"]
 - ["PSo21UIAppearanceContainer", "prepareLargeCardViewExample"]
-- ["PSo21UIAppearanceContainer", "test2"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - !private ["PSo21UIAppearanceContainer", "textColor"]
 - !private ["PSo21UIAppearanceContainer", "view"]
@@ -411,18 +360,14 @@ depends-member:
 - ["PSo21UIAppearanceContainer", ""]
 - !private ["PSo18UIContentContainer", "Float"]
 - !private ["PSo18UIContentContainer", "MaterialColor"]
-- !private ["PSo18UIContentContainer", "MaterialIcon"]
 - ["PSo18UIContentContainer", "ProgrammaticallyObject"]
 - !private ["PSo18UIContentContainer", "RobotoFont"]
-- !private ["PSo18UIContentContainer", "UIImage"]
 - !private ["PSo18UIContentContainer", "UILabel"]
 - !private ["PSo18UIContentContainer", "UIScreen"]
 - ["PSo18UIContentContainer", "detailApp"]
-- ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "object"]
 - ["PSo18UIContentContainer", "prepareLargeCardViewExample"]
-- ["PSo18UIContentContainer", "test2"]
 - !private ["PSo18UIContentContainer", "view"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
@@ -446,16 +391,13 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "textColor"]
 - !private ["PSo18UIFocusEnvironment", "Float"]
 - !private ["PSo18UIFocusEnvironment", "MaterialColor"]
-- !private ["PSo18UIFocusEnvironment", "MaterialIcon"]
 - ["PSo18UIFocusEnvironment", "ProgrammaticallyObject"]
 - !private ["PSo18UIFocusEnvironment", "RobotoFont"]
-- !private ["PSo18UIFocusEnvironment", "UIImage"]
 - !private ["PSo18UIFocusEnvironment", "UILabel"]
 - !private ["PSo18UIFocusEnvironment", "UIScreen"]
 - !private ["PSo18UIFocusEnvironment", "addSubview"]
 - !private ["PSo18UIFocusEnvironment", "backgroundColor"]
 - ["PSo18UIFocusEnvironment", "detailApp"]
-- ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UIFocusEnvironment", "font"]
 - !private ["PSo18UIFocusEnvironment", "grid"]
 - ["PSo18UIFocusEnvironment", "init"]
@@ -463,13 +405,11 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "numberOfLines"]
 - ["PSo18UIFocusEnvironment", "object"]
 - ["PSo18UIFocusEnvironment", "prepareLargeCardViewExample"]
-- ["PSo18UIFocusEnvironment", "test2"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - !private ["PSo18UIFocusEnvironment", "textColor"]
 - !private ["PSo18UIFocusEnvironment", "view"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
-- !private ["CSo7UIImage", "init"]
 - !private ["CSo7UILabel", "backgroundColor"]
 - !private ["CSo7UILabel", "font"]
 - !private ["CSo7UILabel", "grid"]
@@ -482,19 +422,15 @@ depends-member:
 - !private ["CSo11UIResponder", "Float"]
 - !private ["CSo11UIResponder", "IconButton"]
 - !private ["CSo11UIResponder", "MaterialColor"]
-- !private ["CSo11UIResponder", "MaterialIcon"]
 - !private ["CSo11UIResponder", "MaterialPulseView"]
 - !private ["CSo11UIResponder", "MaterialView"]
 - ["CSo11UIResponder", "ProgrammaticallyObject"]
 - !private ["CSo11UIResponder", "RobotoFont"]
-- ["CSo11UIResponder", "String"]
-- !private ["CSo11UIResponder", "UIImage"]
 - !private ["CSo11UIResponder", "UILabel"]
 - !private ["CSo11UIResponder", "UIScreen"]
 - !private ["CSo11UIResponder", "addSubview"]
 - !private ["CSo11UIResponder", "backgroundColor"]
 - ["CSo11UIResponder", "detailApp"]
-- ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - !private ["CSo11UIResponder", "font"]
 - !private ["CSo11UIResponder", "grid"]
 - ["CSo11UIResponder", "init"]
@@ -502,7 +438,6 @@ depends-member:
 - !private ["CSo11UIResponder", "numberOfLines"]
 - ["CSo11UIResponder", "object"]
 - ["CSo11UIResponder", "prepareLargeCardViewExample"]
-- ["CSo11UIResponder", "test2"]
 - !private ["CSo11UIResponder", "text"]
 - !private ["CSo11UIResponder", "textColor"]
 - !private ["CSo11UIResponder", "view"]
@@ -511,34 +446,27 @@ depends-member:
 - !private ["CSo8UIScreen", "mainScreen"]
 - !private ["PSo16UIStateRestoring", "Float"]
 - !private ["PSo16UIStateRestoring", "MaterialColor"]
-- !private ["PSo16UIStateRestoring", "MaterialIcon"]
 - ["PSo16UIStateRestoring", "ProgrammaticallyObject"]
 - !private ["PSo16UIStateRestoring", "RobotoFont"]
-- !private ["PSo16UIStateRestoring", "UIImage"]
 - !private ["PSo16UIStateRestoring", "UILabel"]
 - !private ["PSo16UIStateRestoring", "UIScreen"]
 - ["PSo16UIStateRestoring", "detailApp"]
-- ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "object"]
 - ["PSo16UIStateRestoring", "prepareLargeCardViewExample"]
-- ["PSo16UIStateRestoring", "test2"]
 - !private ["PSo16UIStateRestoring", "view"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
 - !private ["PSo18UITraitEnvironment", "Float"]
 - !private ["PSo18UITraitEnvironment", "MaterialColor"]
-- !private ["PSo18UITraitEnvironment", "MaterialIcon"]
 - ["PSo18UITraitEnvironment", "ProgrammaticallyObject"]
 - !private ["PSo18UITraitEnvironment", "RobotoFont"]
-- !private ["PSo18UITraitEnvironment", "UIImage"]
 - !private ["PSo18UITraitEnvironment", "UILabel"]
 - !private ["PSo18UITraitEnvironment", "UIScreen"]
 - !private ["PSo18UITraitEnvironment", "addSubview"]
 - !private ["PSo18UITraitEnvironment", "backgroundColor"]
 - !private ["PSo18UITraitEnvironment", "bounds"]
 - ["PSo18UITraitEnvironment", "detailApp"]
-- ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UITraitEnvironment", "font"]
 - !private ["PSo18UITraitEnvironment", "grid"]
 - ["PSo18UITraitEnvironment", "init"]
@@ -547,7 +475,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "numberOfLines"]
 - ["PSo18UITraitEnvironment", "object"]
 - ["PSo18UITraitEnvironment", "prepareLargeCardViewExample"]
-- ["PSo18UITraitEnvironment", "test2"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - !private ["PSo18UITraitEnvironment", "textColor"]
 - !private ["PSo18UITraitEnvironment", "view"]
@@ -566,21 +493,16 @@ depends-member:
 - !private ["CSo16UIViewController", "Float"]
 - !private ["CSo16UIViewController", "IconButton"]
 - !private ["CSo16UIViewController", "MaterialColor"]
-- !private ["CSo16UIViewController", "MaterialIcon"]
 - !private ["CSo16UIViewController", "MaterialPulseView"]
 - !private ["CSo16UIViewController", "MaterialView"]
 - ["CSo16UIViewController", "ProgrammaticallyObject"]
 - !private ["CSo16UIViewController", "RobotoFont"]
-- ["CSo16UIViewController", "String"]
-- !private ["CSo16UIViewController", "UIImage"]
 - !private ["CSo16UIViewController", "UILabel"]
 - !private ["CSo16UIViewController", "UIScreen"]
 - ["CSo16UIViewController", "detailApp"]
-- ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "object"]
 - ["CSo16UIViewController", "prepareLargeCardViewExample"]
-- ["CSo16UIViewController", "test2"]
 - !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
@@ -588,7 +510,6 @@ depends-member:
 - !private ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
 - !private ["Ps19_CVarArgAlignedType", "init"]
 - !private ["Ps22_CVarArgPassedAsDouble", "init"]
-- !private ["Ps24_ImageLiteralConvertible", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps12_Reflectable", "addSubview"]
 - !private ["Ps12_Reflectable", "backgroundColor"]
@@ -605,22 +526,17 @@ depends-member:
 - !private ["C9grability20detailViewController", "Float"]
 - !private ["C9grability20detailViewController", "IconButton"]
 - !private ["C9grability20detailViewController", "MaterialColor"]
-- !private ["C9grability20detailViewController", "MaterialIcon"]
 - !private ["C9grability20detailViewController", "MaterialPulseView"]
 - !private ["C9grability20detailViewController", "MaterialView"]
 - ["C9grability20detailViewController", "ProgrammaticallyObject"]
 - !private ["C9grability20detailViewController", "RobotoFont"]
-- ["C9grability20detailViewController", "String"]
-- !private ["C9grability20detailViewController", "UIImage"]
 - !private ["C9grability20detailViewController", "UILabel"]
 - !private ["C9grability20detailViewController", "UIScreen"]
 - ["C9grability20detailViewController", "deinit"]
 - ["C9grability20detailViewController", "detailApp"]
-- ["C9grability20detailViewController", "didReceiveMemoryWarning"]
 - ["C9grability20detailViewController", "init"]
 - ["C9grability20detailViewController", "object"]
 - !private ["C9grability20detailViewController", "prepareLargeCardViewExample"]
-- ["C9grability20detailViewController", "test2"]
 - !private ["C9grability20detailViewController", "view"]
 - ["C9grability20detailViewController", "viewDidLoad"]
 depends-nominal:
@@ -644,7 +560,6 @@ depends-nominal:
 - !private "OSC15NSLineBreakMode"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- !private "PSo14NSSecureCoding"
 - "C9grability22ProgrammaticallyObject"
 - !private "Ps16RawRepresentable"
 - !private "Ps16SignedNumberType"
@@ -656,7 +571,6 @@ depends-nominal:
 - !private "PSo17UICoordinateSpace"
 - !private "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
-- !private "CSo7UIImage"
 - !private "CSo7UILabel"
 - "CSo11UIResponder"
 - !private "CSo8UIScreen"
@@ -668,7 +582,6 @@ depends-nominal:
 - !private "Ps33_BuiltinIntegerLiteralConvertible"
 - !private "Ps19_CVarArgAlignedType"
 - !private "Ps22_CVarArgPassedAsDouble"
-- !private "Ps24_ImageLiteralConvertible"
 - !private "Ps21_ObjectiveCBridgeable"
 - !private "Ps12_Reflectable"
 - "C9grability20detailViewController"
@@ -683,4 +596,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
-interface-hash: "ba775d3ace89c4290848eace0b0a6cbb"
+interface-hash: "195b28c4be09332c1475138dd6ed4d09"
