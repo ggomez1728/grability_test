@@ -9,14 +9,28 @@
 import UIKit
 import CoreData
 
+/**
+ This class representing Drive for save data in Core Data.
+ */
 class DataPersistence: NSObject {
     
+    /// Represent the context for manage Core Data of application
     var context:NSManagedObjectContext?
     
+    /**
+     This is a constructor of class.
+     */
+    /// - Parameters : Represent elements
+    /// - Parameter context:  Receive the context of Application.
     init(context:NSManagedObjectContext?){
         self.context = context
     }
     
+    /**
+     This function allows save data persistence.
+     */
+    /// - Parameters : Represent elements
+    /// - Parameter apps: It's a array of type App to will save
     func saveApps(apps:[App]){
         for app in apps{
             if (!self.testCategoryExists(app.category.id)){
@@ -30,6 +44,10 @@ class DataPersistence: NSObject {
         }
     }
     
+    /**
+     This function give the categories saved in Core Data.
+     */
+    ///  - Returns: An Array of Categories.
     func getCategories() -> [Category] {
         var categories:[Category] = []
         categories.append(Category(id: 0, term: "All"))
@@ -52,6 +70,10 @@ class DataPersistence: NSObject {
         return categories
     }
     
+    /**
+     This function give it all Apps saved in Core Data.
+     */
+    ///  - Returns: An Array of Apps.
     func getAllApps() -> [App] {
         var apps:[App]=[]
         let AppEntity = NSEntityDescription.entityForName("App", inManagedObjectContext: self.context!)
@@ -69,12 +91,6 @@ class DataPersistence: NSObject {
                     image = UIImage(data: readAppEntity.valueForKey("image") as! NSData)
                 }
                 let id_category = readAppEntity.valueForKey("id_category")!.integerValue
-                
-                //let categoryEntity = readAppEntity.valueForKey("belongs_to")
-                //let term = categoryEntity.first.valueForKey("term") as! String
-
-
-                // fail in belongsTo
                 let readApp = App(id: id, title: title, summary: summary, id_category: id_category, term: "", rights: rights, url_image: url_image, image: image)
                 apps.append(readApp)
             }
@@ -85,6 +101,13 @@ class DataPersistence: NSObject {
         return apps
     }
     
+    /**
+     This function give it Apps of category selected and saved in Core Data.
+     */
+    /// - Parameters : Represent elements
+    /// - Parameter idCategory: It's a id of Category selected for sort data
+    
+    ///  - Returns: An Array of Apps.
     func getAppsForCategory(id_category id_category:Int) -> [App] {
         var apps:[App]=[]
         let AppEntity = NSEntityDescription.entityForName("App", inManagedObjectContext: self.context!)
@@ -114,6 +137,15 @@ class DataPersistence: NSObject {
     }
     
     //Privates Functions 
+    
+    
+    /**
+     This function check if the category did has saved in Core Data.
+     */
+    /// - Parameters : Represent elements
+    /// - Parameter id: It's a id of Category selected to find
+    
+    ///  - Returns: Boolean response.
     private func testCategoryExists(id: Int)->Bool{
         var response: Bool = false
         let categoryEntity = NSEntityDescription.entityForName("Category", inManagedObjectContext: self.context!)
@@ -130,6 +162,13 @@ class DataPersistence: NSObject {
         return response
     }
     
+    /**
+     This function check if the App did has saved in Core Data.
+     */
+    /// - Parameters : Represent elements
+    /// - Parameter id: It's a id of App selected to find
+    
+    ///  - Returns: Boolean response.
     private func testAppExists(id:Int)->Bool{
         var response:Bool = false
         let AppEntity = NSEntityDescription.entityForName("App", inManagedObjectContext: self.context!)
@@ -146,6 +185,11 @@ class DataPersistence: NSObject {
         return response
     }
     
+    /**
+     This function save the category in Core Data.
+     */
+    /// - Parameters : Represent elements
+    /// - Parameter app: It's a App with datas of category to save
     private func saveCategory(app:App){
         
         let newCategoryEntity = NSEntityDescription.insertNewObjectForEntityForName("Category", inManagedObjectContext: self.context!)
@@ -160,6 +204,11 @@ class DataPersistence: NSObject {
         }
     }
     
+    /**
+     This function save the app in Core Data.
+     */
+    /// - Parameters : Represent elements
+    /// - Parameter app: It's a App to save
     private func saveApp(app:App){
         let categoryEntity = NSEntityDescription.entityForName("Category", inManagedObjectContext: self.context!)
         let requestCategory = categoryEntity?.managedObjectModel.fetchRequestFromTemplateWithName("reqCategory", substitutionVariables: ["id":app.category.id])
@@ -173,6 +222,12 @@ class DataPersistence: NSObject {
             print("Fail request category exist")
         }
     }
+    /**
+     This function save the app entity for Core Data.
+     */
+    /// - Parameters : Represent elements
+    /// - Parameter app: It's a App with datas to save
+    ///  - Returns: NSObject response for relationship hasMany.
 
     private func saveAppEntity(app:App)->NSObject{
         let appEntity = NSEntityDescription.insertNewObjectForEntityForName("App", inManagedObjectContext: self.context!)

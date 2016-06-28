@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C9grability3App", ""]
 provides-dynamic-lookup:
-- "setImageForApp"
 - "category"
-- "url_image"
 - "id"
-- "image"
-- "summary"
-- "title"
 - "rights"
+- "summary"
+- "setImageForApp"
+- "title"
+- "image"
+- "url_image"
 depends-top-level:
-- "Category"
+- "Int"
 - !private "StringLiteralType"
+- "App"
+- "Category"
+- "String"
 - "NSObject"
 - "UIImage"
-- "App"
-- "Int"
-- "String"
 depends-member:
 - !private ["Ps9AnyObject", "Category"]
 - ["Ps9AnyObject", "category"]

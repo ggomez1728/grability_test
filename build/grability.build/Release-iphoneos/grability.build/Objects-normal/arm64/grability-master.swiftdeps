@@ -1,15 +1,15 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
 options: "cbbb2591171bbb4ff272d609a9c1521c"
-build_time: [520390665, 868690000]
+build_time: [520445287, 455928000]
 inputs:
-  "/Users/pollinion/Developer/swift/grability/grability/Category.swift": !dirty [520186502, 0]
-  "/Users/pollinion/Developer/swift/grability/grability/App.swift": !dirty [520228024, 0]
+  "/Users/pollinion/Developer/swift/grability/grability/Category.swift": !dirty [520441991, 0]
+  "/Users/pollinion/Developer/swift/grability/grability/App.swift": !dirty [520443563, 0]
   "/Users/pollinion/Developer/swift/grability/grability/detailViewController.swift": !dirty [520388908, 0]
-  "/Users/pollinion/Developer/swift/grability/grability/DataPersistence.swift": !dirty [520306679, 0]
-  "/Users/pollinion/Developer/swift/grability/grability/DataRequest.swift": !dirty [520312315, 0]
-  "/Users/pollinion/Developer/swift/grability/grability/ProgrammaticallyObject.swift": !dirty [520295908, 0]
+  "/Users/pollinion/Developer/swift/grability/grability/DataPersistence.swift": !dirty [520444456, 0]
+  "/Users/pollinion/Developer/swift/grability/grability/DataRequest.swift": !dirty [520441843, 0]
+  "/Users/pollinion/Developer/swift/grability/grability/ProgrammaticallyObject.swift": !dirty [520445270, 0]
   "/Users/pollinion/Developer/swift/grability/grability/ViewController.swift": !dirty [520310167, 0]
   "/Users/pollinion/Developer/swift/grability/grability/AppViewCell.swift": !dirty [520300000, 0]
   "/Users/pollinion/Developer/swift/grability/grability/CategoriesViewController.swift": !dirty [520306831, 0]
   "/Users/pollinion/Developer/swift/grability/grability/AppsCollectionView.swift": !dirty [520363456, 0]
-  "/Users/pollinion/Developer/swift/grability/grability/AppDelegate.swift": !dirty [520027170, 0]
+  "/Users/pollinion/Developer/swift/grability/grability/AppDelegate.swift": !dirty [520438426, 0]

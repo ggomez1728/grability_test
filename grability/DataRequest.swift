@@ -8,8 +8,22 @@
 
 import UIKit
 
+/**
+ This class representing the Json-Drive for conect to Restfull Service.
+ */
 class DataRequest: NSObject {
+    
+    /**
+      This function get data with the url.
+    */
+    /// - Parameters : Represent elements 
+    /// - Parameter xImage:  Repesent the size of image. (1X = 1, 2X = 2, 3X= 3).
+    /// - Parameter urlString:  It's a url for the connect to server.
+    /// - Parameter numberOfElements:  This represent the number of elements to get of server.
+    /// - Parameter numberOfPage:  This represent the pagination to get of server.
 
+    ///  - Returns: An couple with Array of Apps and type of respose.
+    
     func getData(x_image x_image:Int, url_string: String, numberOfElements:Int, numberOfPage:Int )->(apps: [App], response: String){
 
         var apps:[App]=[]
@@ -71,6 +85,14 @@ class DataRequest: NSObject {
         return (apps, "ok")
     }
     
+    
+    /**
+     This function get image with the url.
+     */
+    /// - Parameters : Represent elements
+    /// - Parameter urlImage:  It's a url for get image.
+    
+    ///  - Returns: An image of type UIImage.
     func getImage(url_image:String) -> UIImage? {
         var element_image: UIImage?
         if (url_image != ""){
